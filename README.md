@@ -616,3 +616,9 @@ let someFunctions = [
 someFunctions.reduce((accumulator, func) => func(accumulator), 30)
 // The final result is 320
 ```
+
+// -----------------------------------------------------------------------------
+// State Management & Mutability
+// -----------------------------------------------------------------------------
+
+tbd
