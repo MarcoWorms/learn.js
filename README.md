@@ -393,7 +393,7 @@ let otherVar = 4 === 4
 // you progress.
 
 // -----------------------------------------------------------------------------
-// Mixing it all up: map, filter, ande reduce
+// Mixing it all up: map, filter, and reduce
 // -----------------------------------------------------------------------------
 
 // By now we have learned about complex types such as Functions, Objects, Arrays
