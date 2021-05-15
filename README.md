@@ -12,7 +12,7 @@
 
 ```js
 
-// If you copy any part of this guide inside the code blocks you will be able to 
+// If you copy any part of this guide inside the code blocks you will be able to
 // paste it in a developer console and see the code output. To open a javascript
 // developer console: open your web browser > press F12 > console tab. It's
 // recommended to read this guide with the console open and fiddle with the
@@ -658,9 +658,142 @@ someFunctions.reduce((accumulator, func) => func(accumulator), 30)
 
 ```
 
-## State Management & Mutability
+## Mutability
 
 ```js
 
-// to be done
+// With all the tools above you are ready to transform anything into anything
+// you want. I'd like to introduce you now to the concept of Mutability and
+// Imutability so we can learn about state management, which will help us
+// understand how to better manage our code
+  
+```
+
+## Mutations
+
+```js 
+
+// Mutation is the act of changing an existing variable without creating a new
+// variable. Throrougt this guide there were a few examples where a variable was
+// declared with "let" and then later on it was reassigned to another variable,
+// that is a mutation. Here are some examples of mutations:
+  
+let a = 1 // No mutation happened here
+a = a + 1 // This is a mutation
+  
+let b = { value: "something" } // No mutation happened here
+b.value = "something else" // This is a mutation
+
+let c = [1, 2, 3] // This is a mutation
+c[0] = c[0] + 1 // This is a mutation
+c[1] = c[1] + 1 // This is a mutation
+c[2] = c[2] + 1 // This is a mutation
+console.log(c) // [4, 5, 6]
+  
+// Here are the same examples avoiding mutations
+  
+let a = 1
+let newA = a + 1
+  
+let b = { value: "something" }
+let newB = { value: "something else", ...b }
+
+let c = [1, 2, 3]
+let newC = c.map(x => x + 1) //[4, 5, 6]
+  
+// Note: map, filter, and reduce will always produce new values instead of
+// mutating the old value, this is part of why they are amazing tools
+  
+// We can clearly see that in the second example we had to create more variables
+// and invent more names, but in the long run you'll be able to grasp how this
+// allows you to write clearer and more debugable code.
+
+// One of the most common source of errors in programming happensby sharing a
+// variable among many functions and mutating it, but this procedure is also a
+// necessity for most of the programs. Let's learn now how to share a variable
+// with functions to act as a storage and try to keep our mutations contained so
+// our program's complexity doesn't outgrow us.
+  
+```
+  
+## Scopes and State Management 
+
+```js
+
+// Our functions have access to all variables in the scope that it was declared.
+// Let's see what this means in pratice:
+
+let x = 1
+
+let someFunc = () => {
+  console.log(x) // 1
+}
+
+// see how someFunc can access x. Lets see how this wouldn't be possible
+
+let somefunc = () => {
+  let x = 2
+}
+
+let otherFunc = () => {
+  console.log(x) // x is not defined (undefined)
+}
+
+// otherFunc cant acess x because its only visible inside someFunc scope. Let's see other example:
+
+let somefunc = () => {
+  let otherFunc = () => {
+    let x = 2
+  }
+  console.log(x) // x is not defined (undefined)
+}
+
+//  someFunc cant aceess X because only otherFunc can. But now lets make an example where it works:
+let x = 1
+let somefunc = () => {
+  let y = 2
+  let otherFunc = () => {
+    let z = 3
+    console.log(x) // 1
+    console.log(y) // 2
+    console.log(z) // 3
+  }
+}
+
+// otherFunc can acess everythins. someFunc can acess x, and y. The rest of the program will only be able to acess x. Lets see how we use this in pratice:
+
+let createStatefullObject = (initialValue) => {
+
+  let value = initialValue
+
+  return {
+    increment: (amount = 1) => {
+    // "amount = 1" means that if amount is not sent it will be defaulted to 1
+      value = value + amount
+    },
+    display: () => {
+      console.log(`Value is: ${value}`)
+    }
+  }
+
+}
+
+let object = createStatefullObject(0)
+  
+object.display() // Value is: 0
+
+object.increment()
+
+object.display() // Value is: 1
+  
+object.increment(5)
+  
+object.display() // Value is: 6
+  
+// The thing to note here is that we cannot access "value" inside our object
+// without using the functions that we returned. This is a technique that uses
+// the parent function scope to hold a variable that can be used by all inner
+// functions but cannot be accessed by outside. This property of sharing scopes
+// between functions is called "Closure"
+  
 ```
