@@ -635,7 +635,8 @@ moreProducts.reduce((accumulator, product) => accumulator + product.price, 0)
 
 // the execution of the above code happens like this:
 
-// (0, { ... price: 100 }) =>  0 + 100 (100, { ... price: 10 }) =>  100 + 10
+// (0, { ... price: 100 }) =>  0 + 100
+// (100, { ... price: 10 }) =>  100 + 10
 // (110, { ... price: 50 }) =>  110 + 50
 
 // Note that the accumulator is always the result of the previous function
