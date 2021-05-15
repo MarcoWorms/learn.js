@@ -666,7 +666,6 @@ someFunctions.reduce((accumulator, func) => func(accumulator), 30)
 // you want. I'd like to introduce you now to the concept of Mutability and
 // Imutability so we can learn about state management, which will help us
 // understand how to better manage our code
-  
 ```
 
 ## Mutations
@@ -713,7 +712,6 @@ let newC = c.map(x => x + 1) //[4, 5, 6]
 // necessity for most of the programs. Let's learn now how to share a variable
 // with functions to act as a storage and try to keep our mutations contained so
 // our program's complexity doesn't outgrow us.
-  
 ```
   
 ## Scopes and State Management 
@@ -795,5 +793,4 @@ object.display() // Value is: 6
 // the parent function scope to hold a variable that can be used by all inner
 // functions but cannot be accessed by outside. This property of sharing scopes
 // between functions is called "Closure"
-  
 ```
