@@ -79,8 +79,8 @@
 "pancake cake"
 
 // both phrases bellow are the same. ` is a newer version of '/" that allows
-// strings to have linebrakes and also allows for us to add variables(a concept
-// still to be explanied) inside them lather on.
+// strings to have line breaks and also allows for us to add variables (a concept
+// still to be explained) inside them later on.
   
 'this makes\nme hungry'
 
@@ -110,7 +110,7 @@ false
 1 !== 1 // false (not equals)
 
 4 > 3 // true (greater than)
-3 >= 3 // true (greate than or equals)
+3 >= 3 // true (greater than or equals)
 
 4 <= 3 // false (smaller than)
 4 < 3 // false (smaller than or equals)
@@ -137,7 +137,7 @@ false || false // false
 undefined
 null
 
-// Whats the difference? Roughly "undefined" happens when a value wat not ever
+// Whats the difference? Roughly "undefined" happens when a value was not ever
 // defined to begin with. "null" is a value that normally someone purposly added
 // there because it will be filled later on. You should bother much with both
 // now, just know that they exist and they act as "false" when used on boolean
@@ -175,9 +175,9 @@ let anotherValue = 4 < 3 // in other words, anotherValue = false
 y // 4
 someValue // "a string"
 
-// We use the reserver keyword "let" in order to tell javascript that we want
+// We use the reserved keyword "let" in order to tell javascript that we want
 // our variables to not only exist but also to have a initial value. After that
-// we can read or variables by simply using their names. We can always reassign
+// we can read our variables by simply using their names. We can always reassign
 // new values to our variables that were declared with "let":
 
 y = 6
@@ -238,7 +238,7 @@ let shirt = {
 shirt.price // 19.90
 
 // Objects allow you to structure "new data types" that are specific to your
-// problem's needs. Here is a secret: all the types we've ween until now are
+// problem's needs. Here is a secret: all the types we've seen until now are
 // built on top of an "Object" because everything in JS is an Object.This will
 // make more sense as you learn more concepts.
 
@@ -282,7 +282,7 @@ listOfFruits[2] // "mayonese"
 // not assign new properties to them)
 listOfFruits.length // 3 
 
-// Arrays and Lists are extremely usefull in many scenarios, specially when you
+// Arrays and Lists are extremely useful in many scenarios, specially when you
 // want to apply operations to a large amount of data that has the same type
 // We'll dive deeper into them later.
 
@@ -293,7 +293,7 @@ listOfFruits.length // 3
 ```js
 
 // You can merge objects into other objects or arrays into other arrays. This is
-// a largely usefull operation that javascript has a sweet new syntax for you to
+// a largely useful operation that javascript has a sweet new syntax for you to
 // do it:
 
 let objectA = { name: "Avocado" }
@@ -336,17 +336,17 @@ let arrayBA = [
 
 ```js
 
-// One of the most beautifull parts in JS are functions. Function is a data type
+// One of the most beautiful parts in JS are functions. Function is a data type
 // that allow you to store a piece of code so you can then execute it later on.
 // It allows you to easily customize the input value from the usage perspective
-// and when you mix Functictions with Arrays, Objects, and the other data types
-// you can achieve any operation you desire. Lets understand the basic concepts
+// and when you mix Functions with Arrays, Objects, and the other data types
+// you can achieve any operation you desire. Let's understand the basic concepts
 // of functions:
 
 let addNumbers = function (someNumber, anotherNumber) {
   // someNumber and anotherNumber are variables that we are going to use inside
   // the function and will be passed by the code who calls this function with
-  // (). This comonly called "argument" or "parameter" You can name parameters
+  // (). This commonly called "argument" or "parameter". You can name parameters
   // as you like and have as many as you want.
 
   // you can do lots of things here
@@ -364,13 +364,13 @@ addNumbers("a", "b") // "ab"
 
 // OMG we just went full illegal and used addNumbers to actually add strings! JS
 // is a really permissive language and with great power comes great
-// responsibility. functions by default do not care about what types you send
+// responsibility. Functions by default do not care about what types you send
 // when you use them, since in js the + operator can also be used by strings our
 // function will work, but it's our responsibility to build the tools that we
 // want if we want to prevent unwanted scenarios (or if you want strong type
 // safety in JS you can use something like typescript)
 
-// We can write functions in a shortwer way thanks to the new versions of
+// We can write functions in a shorter way thanks to the new versions of
 // javascript:
 
 let divide = (x, y) => {
@@ -388,7 +388,7 @@ let mulitply = (x, y) => x * y
 console.log("Hi there!")
 
 // console.log is a default function that will print a value into your console.
-// Until now we've been typyng and returing values one by one, when running a
+// Until now we've been typing and returing values one by one, when running a
 // program with many lines and values we often use console.log to debug or
 // describe actions in our developer console.
 ```
@@ -430,10 +430,10 @@ let otherVar = 4 === 4
 
 // By now we have learned about complex types such as Functions, Objects, Arrays
 // and simpler types like Number, String, Boolean, and emptiness. When
-// developing javascript you can always use any type anywhere. For example you
+// developing in javascript you can always use any type anywhere. For example you
 // could have an Array of Objects that has Functions inside them, or you can
 // have a Function that receives another Function as a variable. There is trully
-// no limits as to what you do with the tyos that you just learned, this is both
+// no limits as to what you do with the types that you just learned, this is both
 // really awesome and really dangerous because it's easy to lose track of what
 // function deals with what part of your problem if you don't organize your code
 // properly.
@@ -483,7 +483,7 @@ newList = list.map((element) => increment(element))
 
 newList = list.map(function (element) { return increment(element) })
 
-// Lets see another example but this time using a more complex data type inside
+// Let's see another example but this time using a more complex data type inside
 // our Array and we'll also use some of our Merge knowledge
 
 let anotherList = [
@@ -497,7 +497,7 @@ let anotherList = [
   },
 ]
 
-// this time we have a list of Objects where an objects represents a fruit and
+// this time we have a list of Objects where an object represents a fruit and
 // how do we think it tastes. Let's say that today we really hate fruits and we
 // need to fix our list in order to match reality
 
@@ -521,15 +521,15 @@ console.log(anotherNewList) /*
 ]
 */
 
-// this can be rewriten in a shorter manner to achieve the same result:
+// this can be rewritten in a shorter manner to achieve the same result:
 
 anotherNewList = anotherList.map((fruit) => ({
   ...fruit,
   tastes: "Really Bad",
 }))
 
-// Merging is extremelly usefull for creating new objects that inherit all old
-// properties allowing you to mannualy override the values you want. We've use
+// Merging is extremelly useful for creating new objects that inherit all old
+// properties allowing you to manually override the values you want. We've use
 // this in the examples above in order to use map to create a list of new
 // objects given our list of old objects.
 
@@ -544,9 +544,9 @@ anotherNewList = anotherList.map((fruit) => ({
 ```js
 
 
-// the usage of filter is really simmilar to map. It's a built-in array function
+// the usage of filter is really similar to map. It's a built-in array function
 // that you also sends a function as input just like map, but instead of
-// returning a new value you return either true or false to determine wether an
+// returning a new value you return either true or false to determine whether an
 // element should be kept or thrown away. Here is a simple example:
 
 let isEven = x => x % 2 === 0
@@ -579,11 +579,11 @@ let newFruitList = moreFruits.filter(fruit => fruit.tastes === "Really Good")
 ```js
 
 
-// sice both map and filter are guaranteed to always return a new array we can
+// since both map and filter are guaranteed to always return a new array we can
 // always chain another map or filter, this is a really sweet way to chain
 // operations even if you are working only with 1 element inside the array. As
 // you progress into programming you'll see how wonderfull this property really
-// is, but by noew let's just try to grasp the basic usage:
+// is, but for now let's just try to grasp the basic usage:
 
 let products = [
   { name: "Skate", category: "Sports", price: 100 },
@@ -591,7 +591,7 @@ let products = [
   { name: "Shirt", category: "Clothes", price: 50 },
 ]
 
-// lets say we sant to generate a list that has only Sports products and we'll
+// let's say we want to generate a list that has only Sports products and we'll
 // also apply a 20% discount on them.
 
 products
@@ -610,7 +610,7 @@ products
 
 ```js
 
-// aka: the father of map and filter
+// aka: the parent of map and filter
 
 // Reduce is the most powerfull function in our triad (map, filter, reduce)
 // because you can simply write both map and filter with reduce and really you
@@ -619,7 +619,7 @@ products
 // elements, but the difference between map and reduce is that the reduce
 // function will maintain a variable that is always passed forward to the next
 // iteration so you can build up anything you want by reading the array element
-// by alement and then building up this shared variable (called accumulator).
+// by element and then building up this shared variable (called accumulator).
 // Let's see this in pratice:
 
 let moreProducts = [
@@ -628,7 +628,7 @@ let moreProducts = [
   { name: "Shirt", category: "Clothes", price: 50 },
 ]
 
-// how would you summ the prices of all products? Let's do it with reduce:
+// how would you sum the prices of all products? Let's do it with reduce:
 
 moreProducts.reduce((accumulator, product) => accumulator + product.price, 0)
 // 160
@@ -639,11 +639,11 @@ moreProducts.reduce((accumulator, product) => accumulator + product.price, 0)
 // (110, { ... price: 50 }) =>  110 + 50
 
 // Note that the accumulator is always the result of the previous function
-// invokation, and the initial accumulator is passed to the initial reduce
-// function as a seccond argument.
+// invocation, and the initial accumulator is passed to the initial reduce
+// function as a second argument.
 
 // In this case we reduced an array to a number but you could use any type and
-// any kind of operation you want. Lets use reduce in a more complex scenario
+// any kind of operation you want. Let's use reduce in a more complex scenario
 // where we want to apply a series of functions to a value:
 
 let someFunctions = [
