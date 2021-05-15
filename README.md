@@ -3,7 +3,6 @@
 ## Usage
 
 ```js
-// 
 
 // If you copy any part of this guide (or all of it) you will be able to paste
 // it in a developer console and see the code output. To open a javascript
@@ -16,6 +15,11 @@
 // mechanism of programing languages is always about reading some data and then
 // executing some kind of logic with it.
 
+```
+
+# Data types and structures
+
+```js
 // In Javascript we have the following data types ans structures:
 ```
 
@@ -411,7 +415,8 @@ let otherVar = 4 === 4
 // you progress.
 
 ```
-## Mixing it all up: map, filter, and reduce
+
+# Leveling up
 
 ```js
 
