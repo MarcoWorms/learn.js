@@ -1,5 +1,9 @@
+# Learn.js
+
+## Usage
+
 ```js
-// -----------------------------------------------------------------------------
+// 
 
 // If you copy any part of this guide (or all of it) you will be able to paste
 // it in a developer console and see the code output. To open a javascript
@@ -13,21 +17,22 @@
 // executing some kind of logic with it.
 
 // In Javascript we have the following data types ans structures:
+```
 
-// -----------------------------------------------------------------------------
-// Numbers
-// -----------------------------------------------------------------------------
+## Numbers
 
-// (In javascript every number falls into the "Number" type and there is no
-// distinction between integers and floating points)
+```js
+
+// In javascript every number falls into the "Number" type and there is no
+// distinction between integers and floating points
 1
 81072865287.331
 19.35
+```
 
-// -----------------------------------------------------------------------------
-// Operators
-// -----------------------------------------------------------------------------
+## Operators
 
+```js
 // We can start to write some very simple programs if we know about Numbers and
 // operators. Lets write a program that sums 2+2:
 
@@ -46,12 +51,13 @@
 // simply a transformation of some given data. As we learn more complex data
 // structures we'll quickly achieve some problem-solving techniques that no
 // calculator can solve!
+```
 
-// -----------------------------------------------------------------------------
-// Strings
-// -----------------------------------------------------------------------------
+## Strings
 
-// (Sequences of alphanumeric characters, delimited by ', " or `)
+```js
+
+// Sequences of alphanumeric characters, delimited by ', " or `
 
 // ' or " are used for strings that has no literal linebrakes (you can add them
 // with "\n" special character)
@@ -68,10 +74,11 @@
 
 `this makes
 me hungry`
+```
 
-// -----------------------------------------------------------------------------
-// Booleans
-// -----------------------------------------------------------------------------
+## Booleans
+
+```js
 
 // Some might say life is relative, but not for booleans. Boolean is a value
 // that is either true or false
@@ -106,12 +113,14 @@ true || true // true
 true || false // true (in any order)
 false || false // false
 
-// -----------------------------------------------------------------------------
-// Empty values and Boolean conversion
-// -----------------------------------------------------------------------------
+```
 
-// (We can also say something is actually nothing, and one of the worst parts of
-// javascript is that we have 2 ways to say that)
+## Empty values and Boolean conversion
+
+```js
+
+// We can also say something is actually nothing, and one of the worst parts of
+// javascript is that we have 2 ways to say that
 
 undefined
 null
@@ -138,11 +147,11 @@ NaN // Not a Number - shows up when you do math with a type that is not a number
 
 // ALL other values will always be truthy, meaning that they will be considered
 // as true on boolean operations
+```
 
-// -----------------------------------------------------------------------------
-// Variables
-// -----------------------------------------------------------------------------
+## Variables
 
+```js
 // Now that we know about data types let's learn how to store those types in
 // your computer memory so you can access them by your program later on
 
@@ -172,9 +181,11 @@ someValue + " " + someValue // "a string a string"
 
 `${someValue} ${someValue}` // "a string a string"
 
-// -----------------------------------------------------------------------------
-// Objects
-// -----------------------------------------------------------------------------
+```
+
+## Objects
+
+```js
 
 // An object in javascript is a structure where you can have as many data types
 // as you want aggregated in a single data type.
@@ -238,9 +249,11 @@ let setOfClothes = {
 setOfClothes.shirt.color // "blue"
 setOfClothes.pants.color // "red"
 
-// -----------------------------------------------------------------------------
-// Arrays 
-// -----------------------------------------------------------------------------
+```
+
+## Arrays 
+
+```js
 
 // When using an object you store values in "named keys". Objects are an
 // unordered list of values where you can assign keys to access those values. An
@@ -261,9 +274,11 @@ listOfFruits.length // 3
 // want to apply operations to a large amount of data that has the same type
 // We'll dive deeper into them later.
 
-// -----------------------------------------------------------------------------
-// Merge Objects or Arrays
-// -----------------------------------------------------------------------------
+```
+
+## Merge Objects or Arrays
+
+```js
 
 // You can merge objects into other objects or arrays into other arrays. This is
 // a largely usefull operation that javascript has a sweet new syntax for you to
@@ -303,9 +318,11 @@ let arrayBA = [
   ...arrayA,
 ] // [4, 5, 6, 1, 2, 3]
 
-// -----------------------------------------------------------------------------
-// Functions
-// -----------------------------------------------------------------------------
+```
+
+## Functions
+
+```js
 
 // One of the most beautifull parts in JS are functions. Function is a data type
 // that allow you to store a piece of code so you can then execute it later on.
@@ -362,10 +379,11 @@ console.log("Hi there!")
 // Until now we've been typyng and returing values one by one, when running a
 // program with many lines and values we often use console.log to debug or
 // describe actions in our developer console.
+```
 
-// -----------------------------------------------------------------------------
-// Conditional Operations
-// -----------------------------------------------------------------------------
+## Conditional Operations
+
+```js
 
 // One last subject we need before being able to mix all concepts: Conditional
 // execution of code. At many times you'll only want to execute code if a
@@ -392,9 +410,10 @@ let otherVar = 4 === 4
 // Both methods to execute code and assign values conditionally will be used as
 // you progress.
 
-// -----------------------------------------------------------------------------
-// Mixing it all up: map, filter, and reduce
-// -----------------------------------------------------------------------------
+```
+## Mixing it all up: map, filter, and reduce
+
+```js
 
 // By now we have learned about complex types such as Functions, Objects, Arrays
 // and simpler types like Number, String, Boolean, and emptiness. When
@@ -410,10 +429,11 @@ let otherVar = 4 === 4
 // will learn by writing it and applying to real cases and learning what works
 // and what gives you headaches on maintance time.
 
-// -----------------------------------------------------------------------------
-// Map
-// -----------------------------------------------------------------------------
+```
 
+## Map
+
+```js
 
 // Now lets dive into a scenario where we have an Array of numbers and a
 // function that increments a number by 1:
@@ -504,9 +524,11 @@ anotherNewList = anotherList.map((fruit) => ({
 // want to filter some elements out before applying transformations? We use a
 // method called filter for that.
 
-// -----------------------------------------------------------------------------
-// Filter
-// -----------------------------------------------------------------------------
+```
+
+## Filter
+
+```js
 
 
 // the usage of filter is really simmilar to map. It's a built-in array function
@@ -537,9 +559,11 @@ let moreFruits = [
 let newFruitList = moreFruits.filter(fruit => fruit.tastes === "Really Good")
 // [ { name: "Apple", tastes: "Really Good" } ]
 
-// -----------------------------------------------------------------------------
-// Chaining maps and filters
-// -----------------------------------------------------------------------------
+```
+
+## Chaining maps and filters
+
+```js
 
 
 // sice both map and filter are guaranteed to always return a new array we can
@@ -567,9 +591,11 @@ products
 
 // you can chain maps and filters as much as you want!
 
-// -----------------------------------------------------------------------------
-// Reduce
-// -----------------------------------------------------------------------------
+```
+
+## Reduce
+
+```js
 
 // aka: the father of map and filter
 
@@ -616,10 +642,11 @@ let someFunctions = [
 someFunctions.reduce((accumulator, func) => func(accumulator), 30)
 // The final result is 320
 
+```
 
-// -----------------------------------------------------------------------------
-// State Management & Mutability
-// -----------------------------------------------------------------------------
+## State Management & Mutability
+
+```js
 
 // to be done
 ```
