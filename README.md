@@ -8,8 +8,8 @@ The table of content is available in the top left corner of this document:
 
 ```js
 
-// If you copy any part of this guide (or all of it) you will be able to paste
-// it in a developer console and see the code output. To open a javascript
+// If you copy any part of this guide inside the code blocks you will be able to 
+// paste it in a developer console and see the code output. To open a javascript
 // developer console: open your web browser > press F12 > console tab. It's
 // recommended to read this guide with the console open and fiddle with the
 // code, this helps the learning process!
