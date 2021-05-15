@@ -1,5 +1,9 @@
 # Learn.js
 
+The table of content is available in the top left corner of this document:  
+![image](https://user-images.githubusercontent.com/7863230/118364980-2c0e5200-b571-11eb-8237-4c4355579de0.png)
+
+
 ## Usage
 
 ```js
