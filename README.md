@@ -793,4 +793,11 @@ object.display() // Value is: 6
 // the parent function scope to hold a variable that can be used by all inner
 // functions but cannot be accessed by outside. This property of sharing scopes
 // between functions is called "Closure"
+  ```
+
+# Interacting with the world
+
+```js
+// to be done: about npm, node, how to use other people's code, and where to
+// learn more about the tools you learned here and the ones you didn't
 ```
