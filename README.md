@@ -84,7 +84,7 @@ false
 !true // false
 !false // true
 
-// you can also produce boolen values by making comparitions with these
+// you can also produce boolean values by making comparisons with these
 // operators:
 
 1 === 1 // true (equals)
