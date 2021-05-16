@@ -795,6 +795,167 @@ object.display() // Value is: 6
 // between functions is called "Closure"
   ```
 
+# Classes
+A class can be thought of as a blueprint, a template. It contains a set of properties and methods(which are functions in a class) related to it. Let me give an example:
+
+```
+//Here we created a "blueprint" for a car(which basically contains a set of things that makes a car what it is)
+class Car{
+  //The vroom function is an example of a method inside a class. When we add this method inside of it we state that every car has a method called vroom in it.
+  vroom(){
+    //A car goes vroom vroom right?
+    console.log("vroom vroom");
+  }
+}
+```
+
+But how do we actually use this class? We can create(or instantiate) an object! An object(or instance) can be thought of as something that uses the class blueprint. An object has access to the properties and methods that a class uses. Referring back to the class example:
+
+```
+//Here we instantiate(or create) two Car objects. Each object gets its OWN set of Car methods and properties. Make sure to add the new keyword!
+var toyota = new Car();
+var lamborghini = new Car();
+
+//We use the dot operator to access a method or property in a class
+toyota.vroom(); //Will output "vroom vroom"
+lamborghini.vroom(); //Will output "vroom vroom"
+```
+
+This works great, but what if I wanted to set a "color" property? or what if i wanted to set the brand? You can use a constructor to do so.
+
+A constructor can be thought of as a special function that allows you to pass data to a class, and to set attributes(properties) of one. Here's an example:
+
+```
+class Car{
+  //The constructor allows you to pass data in a class, like so. Here we are passing the color and brand attributes to the class. The color, and brand, are parameters which are passed.
+  constructor(color, brand, owner){
+    //This refers to the current class(We set this class's color and brand to the color and brand passed into the constructor)
+    this.color = color;
+    this.brand = brand;
+    this.owner = owner;
+  }
+  vroom(){
+    //Just for reference, this is an alternative to concatenating strings. Make sure to use the back quotes key(the small one to the left of one and above tab on qwerty)
+    //This is the equivalent to doing: console.log("A " + this.color + " " + this.brand + " owned by " + this.owner + " goes vroom vroom")
+    console.log(`A ${this.color} ${this.brand} owned by ${this.owner} goes vroom vroom`);
+  }
+}
+```
+
+
+To pass data in an object, put your arguments in the parenthesis of one. For example, you could do:
+
+```
+//When you instantiate an object, the constructor is called, with these arguments being passed!
+var toyota = new Car("blue", "toyota", "john");
+var lamborghini = new Car("red", "lamborghini", "@dewball345");
+
+toyota.vroom(); //A blue toyota owned by john goes vroom vroom
+lamborghini.vroom(); //A red lamborghini owned by @dewball345 goes vroom vroom
+```
+
+Suppose you had a car counter, which would record the number of car objects created. Would it make sense to give each car a separate car count, like how properties are given? No, because a car counter is supposed to not be for each and every individual car, but for all the cars. For cases like these, it makes sense to use a static variable. Static variables are kept in the main class and are not passed to the objects. While an object can refer to a static variable, it will not have it as a separate property. Hence if you change a static variable once, all objects will have the variable changed.
+
+For example:
+
+```
+class Car{
+  //this is the syntax for creating a static variable
+  static car_count = 0;
+  constructor(){
+    //here we increment the variable by one
+    car_count++;  
+  }
+}
+
+//here we instantiate the car objects
+var car1 = new Car()
+var car2 = new Car()
+
+//There are two ways of referring to a static variable:
+
+//1)
+Car.car_count
+
+//2)
+car1.car_count
+car2.car_count
+
+//Both will give the same result
+```
+
+Methods can also be static as well. 
+
+```
+class Car{
+  static honk(){
+    console.log("All cars honk. Honk Honk!");
+  }
+}
+
+Car.honk() //outputs "All cars honk. Honk Honk!"
+```
+
+Not all cars(and not all classes) are the same. But some share the same functionalities(methods). For example, all cars can honk, wash themselves, and rev. So how can we model this relationship with classes?
+
+Inheritance!
+
+Let me give you an example:
+
+```
+//This is our superclass(or our parent class). This can be thought of as the most generic one, the one that fits all. 
+class Car{
+  constructor(){
+    console.log("this is a car");
+  }
+  honk(){
+    console.log("A car can honk");
+  }
+  wash(){
+    console.log("A car can wash");
+  }
+  rev(){
+    console.log("Vroom vroom!");
+  }
+}
+
+//Here we say that Lamborghini "inherits" the methods of the car class, and that the Lamborghini is the child class while the Car is the parent class. This means it automatically has the methods of the car. Even though we didn't add the methods to this class, the lamborghini can honk, wash, and rev. Keep in mind that properties(variables) are not inherited. 
+
+class Lamborghini extends Car{
+  constuctor(){
+    //When we use the super() function we get the functionality of the parent class's constructor. 
+    super() //will console.log "this is a car"
+    console.log("This type of car is a lamborghini");
+  }
+  
+  //Here we "override" the method from the Car class. This means that when we call the rev() method, we will get this one instead of the cars
+  rev(){
+    console.log("A lamborghini goes vroom vroom VERY FAST");
+  }
+  
+  wash(){
+    //When overriding a method, we can call the parent class's implementation of the method by calling super.*method name*()
+    super.wash()
+    console.log("A lamborghini needs to be washed very carefully!");
+  }
+}
+
+var regular_car = new Car() //this is a car
+
+var lambo = new Lamborghini() 
+//This is a car
+//The type of car is a lamborghini
+
+regular_car.rev() //vroom vroom
+lambo.rev() //A lamborghini goes vroom vroom VERY FAST
+
+regular_car.wash() //A car can wash
+lambo.wash() 
+//A car can wash
+//A lamborghini needs to be washed very carefully
+```
+
+
 # Interacting with the world
 
 ```js
