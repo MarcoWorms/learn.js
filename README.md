@@ -51,7 +51,7 @@
 2 + 4 // 6
 (2 * 4) // 8
 // Parenthesis works as expected in math)
-2 / 4 // 2
+2 / 4 // 0.5
 2 ** 4 // 16 (2 * 2 * 2 * 2)
 5 % 4 // 1 (the remainder of the integer division)
 
