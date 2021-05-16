@@ -798,6 +798,7 @@ object.display() // Value is: 6
 # Interacting with the world
 
 ```js
-// to be done: about npm, node, how to use other people's code, and where to
-// learn more about the tools you learned here and the ones you didn't
+// to be done: about async interactions, npm, node, how to use other people's 
+// code, and where to learn more about the tools you learned here and the ones
+// you didn't
 ```
