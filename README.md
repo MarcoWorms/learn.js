@@ -411,13 +411,13 @@ if (3 === 4) {
 
 // You can also assign values to variables given a condition. for example:
 
-let someVar = 3 === 4 ? "yayy" : "nay" // somevar = "nay"
+let someVar = 3 === 4 ? "yayy" : "nay" // someVar = "nay"
 
 // or you can use whitespace to help with readability
 
 let otherVar = 4 === 4
   ? "yayy"
-  : "nay" // somevar = "yayy"
+  : "nay" // otherVar = "yayy"
 
 // Both methods to execute code and assign values conditionally will be used as
 // you progress.
