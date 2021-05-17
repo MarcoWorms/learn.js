@@ -20,12 +20,12 @@ code, this helps the learning process!
   ![image](https://user-images.githubusercontent.com/7863230/118431315-692b2f00-b6ac-11eb-9aa5-ebcf5185e40a.png)
 </details>
 
+# Data types and structures
+
 Programming always involve some kind of transformation of data. You can store
 data, count it, apply math operations, trigger other flows, but the basic
 mechanism of programing languages is always about reading some data and then
 executing some kind of logic with it.
-
-# Data types and structures
 
 In Javascript we have the following data types ans structures:
 
