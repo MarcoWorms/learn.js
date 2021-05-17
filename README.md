@@ -1,12 +1,10 @@
 # Learn.js
 
-
 <details>
   <summary>The table of content is available in the top left corner of this document. Click here to see a reference image on how to find it.</summary>
   
   ![image](https://user-images.githubusercontent.com/7863230/118364980-2c0e5200-b571-11eb-8237-4c4355579de0.png)
 </details>
-
 
 ## Usage
 
@@ -16,11 +14,16 @@ developer console: open your web browser > press F12 > console tab. It's
 recommended to read this guide with the console open and fiddle with the
 code, this helps the learning process!
 
+<details>
+  <summary>Click here to see a preview image of how the console looks like</summary>
+  
+  ![image](https://user-images.githubusercontent.com/7863230/118431315-692b2f00-b6ac-11eb-9aa5-ebcf5185e40a.png)
+</details>
+
 Programming always involve some kind of transformation of data. You can store
 data, count it, apply math operations, trigger other flows, but the basic
 mechanism of programing languages is always about reading some data and then
 executing some kind of logic with it.
-
 
 # Data types and structures
 
