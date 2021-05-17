@@ -814,7 +814,7 @@ let somefunc = () => {
 ```
 
 `otherFunc` can access everything. `someFunc` can access `a`, and `b`. The rest
-of the program will only be able to acess `a`. Lets see how we use this
+of the program will only be able to access `a`. Lets see how we use this
 in pratice:
 
 ```js
