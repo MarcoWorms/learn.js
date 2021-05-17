@@ -759,7 +759,7 @@ let somefunc = () => {
   }
 }
 
-// otherFunc can acess everythins. someFunc can acess x, and y. The rest of the program will only be able to acess x. Lets see how we use this in pratice:
+// otherFunc can acess everything. someFunc can acess a, and b. The rest of the program will only be able to acess a. Lets see how we use this in pratice:
 
 let createStatefullObject = (initialValue) => {
 
