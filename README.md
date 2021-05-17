@@ -727,7 +727,7 @@ let someFunc = () => {
   console.log(x) // 0
 }
 
-// see how someFunc can access x. Lets see how this wouldn't be possible
+// see how someFunc can access "x". Lets see how this wouldn't be possible
 
 let somefunc = () => {
   let y = 1
@@ -737,7 +737,8 @@ let otherFunc = () => {
   console.log(y) // y is not defined (undefined)
 }
 
-// otherFunc cant acess y because its only visible inside someFunc scope. Let's see other example:
+// otherFunc cant acess "y" because its only visible inside someFunc scope.
+// Let's see other example:
 
 let somefunc = () => {
   let otherFunc = () => {
@@ -746,7 +747,8 @@ let somefunc = () => {
   console.log(z) // z is not defined (undefined)
 }
 
-//  someFunc cant aceess z because only otherFunc can. But now lets make an example where it works:
+// someFunc cant aceess "z" because only otherFunc can. But now lets make
+// an example where it works:
 
 let a = 1
 let somefunc = () => {
@@ -759,7 +761,9 @@ let somefunc = () => {
   }
 }
 
-// otherFunc can acess everything. someFunc can acess a, and b. The rest of the program will only be able to acess a. Lets see how we use this in pratice:
+// otherFunc can acess everything. someFunc can acess "a", and "b". The rest
+// of the program will only be able to acess "a". Lets see how we use this
+// in pratice:
 
 let createStatefullObject = (initialValue) => {
 
