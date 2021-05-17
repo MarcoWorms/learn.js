@@ -721,40 +721,41 @@ let newC = c.map(x => x + 1) //[4, 5, 6]
 // Our functions have access to all variables in the scope that it was declared.
 // Let's see what this means in pratice:
 
-let x = 1
+let x = 0
 
 let someFunc = () => {
-  console.log(x) // 1
+  console.log(x) // 0
 }
 
 // see how someFunc can access x. Lets see how this wouldn't be possible
 
 let somefunc = () => {
-  let x = 2
+  let y = 1
 }
 
 let otherFunc = () => {
-  console.log(x) // x is not defined (undefined)
+  console.log(y) // y is not defined (undefined)
 }
 
-// otherFunc cant acess x because its only visible inside someFunc scope. Let's see other example:
+// otherFunc cant acess y because its only visible inside someFunc scope. Let's see other example:
 
 let somefunc = () => {
   let otherFunc = () => {
-    let x = 2
+    let z = 2
   }
-  console.log(x) // x is not defined (undefined)
+  console.log(z) // z is not defined (undefined)
 }
 
-//  someFunc cant aceess X because only otherFunc can. But now lets make an example where it works:
-let x = 1
+//  someFunc cant aceess z because only otherFunc can. But now lets make an example where it works:
+
+let a = 1
 let somefunc = () => {
-  let y = 2
+  let b = 2
   let otherFunc = () => {
-    let z = 3
-    console.log(x) // 1
-    console.log(y) // 2
-    console.log(z) // 3
+    let c = 3
+    console.log(a) // 1
+    console.log(b) // 2
+    console.log(c) // 3
   }
 }
 
