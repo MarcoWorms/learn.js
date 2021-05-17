@@ -38,6 +38,8 @@ distinction between integers and floating points
 1
 81072865287.331
 19.35
+
+// this is a comment, everything after // in the same line is ignored!
 ```
 
 ## Math Operators
