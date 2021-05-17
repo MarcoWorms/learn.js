@@ -785,7 +785,7 @@ let otherFunc = () => {
 }
 ```
 
-`otherFunc` can't acess `y` because its only visible inside `someFunc` scope.
+`otherFunc` can't access `y` because its only visible inside `someFunc` scope.
 Let's see other example:
 
 ```js
@@ -797,7 +797,7 @@ let somefunc = () => {
 }
 ```
 
-`someFunc` cant aceess `z` because only `otherFunc` can. But now lets make
+`someFunc` cant access `z` because only `otherFunc` can. But now lets make
 an example where it works:
 
 ```js
@@ -813,7 +813,7 @@ let somefunc = () => {
 }
 ```
 
-`otherFunc` can acess everything. `someFunc` can acess `a`, and `b`. The rest
+`otherFunc` can access everything. `someFunc` can access `a`, and `b`. The rest
 of the program will only be able to acess `a`. Lets see how we use this
 in pratice:
 
