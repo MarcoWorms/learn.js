@@ -51,7 +51,7 @@ We can start to write some very simple programs if we know about Numbers and ope
 5 % 4 // 1 (the remainder of the integer division)
 ```
 
-All 5 lines above could be seen as 5 really small programs. Each of them is very limited but they do perform a purposefull transformation in some initial data. These small programs are still quite unusable for and end user since a basic calculator would solve this types of problems, but the purpose of calling them programs is to try to consolidade the view that a program is simply a transformation of some given data. As we learn more complex data structures we'll quickly achieve some problem-solving techniques that no calculator can solve!
+All 5 lines above could be seen as 5 really small programs. Each of them is very limited but they do perform a purposeful transformation in some initial data. These small programs are still quite unusable for and end user since a basic calculator would solve this types of problems, but the purpose of calling them programs is to try to consolidate the view that a program is simply a transformation of some given data. As we learn more complex data structures we'll quickly achieve some problem-solving techniques that no calculator can solve!
 
 ## Strings
 
@@ -75,7 +75,7 @@ Both phrases bellow are the same. ` is a newer version of ' and " that allows st
 me hungry`
 ```
 
-## Booleans and Comparissons
+## Booleans and Comparisons
 
 Some might say life is relative, but not for booleans. A boolean is a value that is either true or false
 
@@ -126,7 +126,7 @@ undefined
 null
 ```
 
-Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposly added there because it will be filled later on. You should bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are consideres "truthy" or "falsy" when used as booleans:
+Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposely added there because it will be filled later on. You should bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are considered "truthy" or "falsy" when used as booleans:
 
 The following values are always falsy, meaning that when used as booleans they are considered as false:
 
@@ -210,7 +210,7 @@ exampleObject = {
 exampleObject.property // "value"
 ```
 
-Object is a really powerfull data type in JS, as you learn the next data types (Arrays/Lists and Functions) you'll see how easy it is to achieve high complexity solution with only these blocks. We use objects to aggregate data that has some kind of connection between them. Let's say you want to register a shirt on an ecommerce:
+Object is a really powerful data type in JS, as you learn the next data types (Arrays/Lists and Functions) you'll see how easy it is to achieve high complexity solution with only these blocks. We use objects to aggregate data that has some kind of connection between them. Let's say you want to register a shirt on an e-commerce:
 
 ```js
 let shirt = {
@@ -250,11 +250,11 @@ setOfClothes.pants.color // "red"
 When using an object you store values in "named keys". Objects are an unordered list of values where you can assign keys to access those values. An Array (also called a List) is an ordered list of values where the key is the position of the element in the list.
 
 ```js
-let listOfFruits = ["apple", "banana", "mayonese"]
+let listOfFruits = ["apple", "banana", "mayonnaise"]
 
 listOfFruits[0] // "apple"
 listOfFruits[1] // "banana"
-listOfFruits[2] // "mayonese"
+listOfFruits[2] // "mayonnaise"
 ```
 
 Arrays have some properties because they are also objects, but you should not assign new properties to them
@@ -343,10 +343,10 @@ let divide = (x, y) => {
   return x / y
 }
 
-let mulitply = (x, y) => x * y
+let multiply = (x, y) => x * y
 ```
 
-This is a really neat way to write short functions, if you ommit {} it will automatically return the value
+This is a really neat way to write short functions, if you omit {} it will automatically return the value
 
 We use many functions that are standard from JS in order to write our programs. A classic one is:
 
@@ -354,7 +354,7 @@ We use many functions that are standard from JS in order to write our programs. 
 console.log("Hi there!")
 ```
 
-`console.log` is a default function that will print a value into your console. Until now we've been typing and returing values one by one, when running a program with many lines and values we often use console.log to debug or describe actions in our developer console.
+`console.log` is a default function that will print a value into your console. Until now we've been typing and returning values one by one, when running a program with many lines and values we often use console.log to debug or describe actions in our developer console.
 
 ## Conditional Operations
 
@@ -389,9 +389,9 @@ Both methods to execute code and assign values conditionally will be used as you
 
 # Leveling up
 
-By now we have learned about complex types such as Functions, Objects, Arrays and simpler types like Number, String, Boolean, and emptiness. When developing in javascript you can always use any type anywhere. For example you could have an Array of Objects that has Functions inside them, or you can have a Function that receives another Function as a variable. There is trully no limits as to what you do with the types that you just learned, this is both really awesome and really dangerous because it's easy to lose track of what function deals with what part of your problem if you don't organize your code properly.
+By now we have learned about complex types such as Functions, Objects, Arrays and simpler types like Number, String, Boolean, and emptiness. When developing in javascript you can always use any type anywhere. For example you could have an Array of Objects that has Functions inside them, or you can have a Function that receives another Function as a variable. There is truly no limits as to what you do with the types that you just learned, this is both really awesome and really dangerous because it's easy to lose track of what function deals with what part of your problem if you don't organize your code properly.
 
-There is no one - right - way - fits - all to learn how to organize code, you will learn by writing it and applying to real cases and learning what works and what gives you headaches on maintance time.
+There is no one - right - way - fits - all to learn how to organize code, you will learn by writing it and applying to real cases and learning what works and what gives you headaches on maintenance time.
 
 ## Map
 
@@ -414,7 +414,7 @@ Let's say we want to apply increment to all the values inside our list. It would
 let newList = [increment(1), increment(2), increment(3)] // [2, 3, 4]
 ```
 
-If this list had 10000 elements we would last forever to write this code. Luckly Arrays has 3 built-in functions that helps you to apply transformations in the whole list: map, filter an reduce. Map is the first one we'll learn and it solves exactly the case above:
+If this list had 10000 elements we would last forever to write this code. To help us, Arrays has 3 built-in functions that helps you to apply transformations in the whole list: map, filter an reduce. Map is the first one we'll learn and it solves exactly the case above:
 
 ```js
 newList = list.map(increment) // [2, 3, 4]
@@ -478,7 +478,7 @@ anotherNewList = anotherList.map((fruit) => ({
 }))
 ```
 
-Merging is extremelly useful for creating new objects that inherit all old properties allowing you to manually override the values you want. We've use this in the examples above in order to use map to create a list of new objects given our list of old objects.
+Merging is extremely useful for creating new objects that inherit all old properties allowing you to manually override the values you want. We've use this in the examples above in order to use map to create a list of new objects given our list of old objects.
 
 Map is used to apply transformation to all data inside a list. But what if we want to filter some elements out before applying transformations? We use a method called filter for that.
 
@@ -500,12 +500,12 @@ And we could also have more complex types inside the array
 ```js
 let moreFruits = [
   {
-    name: 'Apple',
-    tastes: 'Really Good'
+    name: "Apple",
+    tastes: "Really Good"
   },
   {
-    name: 'Banana',
-    tastes: 'Just Good'
+    name: "Banana",
+    tastes: "Just Good"
   },
 ]
 
@@ -515,7 +515,7 @@ let newFruitList = moreFruits.filter(fruit => fruit.tastes === "Really Good")
 
 ## Chaining maps and filters
 
-Since both map and filter are guaranteed to always return a new array we can always chain another map or filter, this is a really sweet way to chain operations even if you are working only with 1 element inside the array. As you progress into programming you'll see how wonderfull this property really is, but for now let's just try to grasp the basic usage:
+Since both map and filter are guaranteed to always return a new array we can always chain another map or filter, this is a really sweet way to chain operations even if you are working only with 1 element inside the array. As you progress into programming you'll see how wonderfully this property really is, but for now let's just try to grasp the basic usage:
 
 ```js
 let products = [
@@ -541,9 +541,9 @@ Remember: you can chain maps and filters as much as you want!
 
 ## Reduce
 
-Reduce, the parent of map and filter, is the most powerfull function in our triad (map, filter, reduce) because you can simply write both map and filter with reduce and really you can do whatever you want with its power. Reduce allows you to produce any data type you want by reading an array and applying a function to all elements, but the difference between map and reduce is that the reduce function will maintain a variable that is always passed forward to the next iteration so you can build up anything you want by reading the array element by element and then building up this shared variable (called accumulator).
+Reduce, the parent of map and filter, is the most powerful function in our triad (map, filter, reduce) because you can simply write both map and filter with reduce and really you can do whatever you want with its power. Reduce allows you to produce any data type you want by reading an array and applying a function to all elements, but the difference between map and reduce is that the reduce function will maintain a variable that is always passed forward to the next iteration so you can build up anything you want by reading the array element by element and then building up this shared variable (called accumulator).
 
-Let's see this in pratice:
+Let's see this in practice:
 
 ```js
 let moreProducts = [
@@ -584,15 +584,15 @@ someFunctions.reduce((accumulator, func) => func(accumulator), 30)
 // The final result is 320
 ```
 
-Note that because reduce is not guaranteed to return an Array (it will return whatever type you want as the accumulator) you have to be carefull when chaining maps and filters after using a reduce.
+Note that because reduce is not guaranteed to return an Array (it will return whatever type you want as the accumulator) you have to be careful when chaining maps and filters after using a reduce.
 
 ## Mutability
 
-With all the tools above you are ready to transform anything into anything you want. I'd like to introduce you now to the concept of Mutability and Imutability so we can learn about state management, which will help us understand how to better manage our code
+With all the tools above you are ready to transform anything into anything you want. I'd like to introduce you now to the concept of Mutability and Immutability so we can learn about state management, which will help us understand how to better manage our code
 
 ## Mutations
 
-Mutation is the act of changing an existing variable without creating a new variable. Throrougt this guide there were a few examples where a variable was declared with "let" and then later on it was reassigned to another variable, that is a mutation. Here are some examples of mutations:
+Mutation is the act of changing an existing variable without creating a new variable. Thorough this guide there were a few examples where a variable was declared with "let" and then later on it was reassigned to another variable, that is a mutation. Here are some examples of mutations:
 
 ```js
 let a = 1 // No mutation happened here
@@ -625,11 +625,11 @@ Note: map, filter, and reduce will always produce new values instead of mutating
 
 We can clearly see that in the second example we had to create more variables and invent more names, but in the long run you'll be able to grasp how this allows you to write clearer and more debugable code.
 
-One of the most common source of errors in programming happensby sharing a variable among many functions and mutating it, but this procedure is also a necessity for most of the programs. Let's learn now how to share a variable with functions to act as a storage and try to keep our mutations contained so our program's complexity doesn't outgrow us.
+One of the most common source of errors in programming happens by sharing a variable among many functions and mutating it, but this procedure is also a necessity for most of the programs. Let's learn now how to share a variable with functions to act as a storage and try to keep our mutations contained so our program's complexity doesn't outgrow us.
 
 ## Scopes and State Management 
 
-Our functions have access to all variables in the scope that it was declared. Let's see what this means in pratice:
+Our functions have access to all variables in the scope that it was declared. Let's see what this means in practice:
 
 ```js
 let x = 0
@@ -654,7 +654,7 @@ let otherFunc = () => {
 `otherFunc` can't access `y` because its only visible inside `someFunc` scope. Let's see other example:
 
 ```js
-let somefunc = () => {
+let someFunc = () => {
   let otherFunc = () => {
     let z = 2
   }
@@ -666,7 +666,7 @@ let somefunc = () => {
 
 ```js
 let a = 1
-let somefunc = () => {
+let someFunc = () => {
   let b = 2
   let otherFunc = () => {
     let c = 3
@@ -677,10 +677,10 @@ let somefunc = () => {
 }
 ```
 
-`otherFunc` can access everything. `someFunc` can access `a`, and `b`. The rest of the program will only be able to access `a`. Lets see how we use this in pratice:
+`otherFunc` can access everything. `someFunc` can access `a`, and `b`. The rest of the program will only be able to access `a`. Lets see how we use this in practice:
 
 ```js
-let createStatefullObject = (initialValue) => {
+let createStatefulObject = (initialValue) => {
 
   let value = initialValue
 
@@ -696,7 +696,7 @@ let createStatefullObject = (initialValue) => {
 
 }
 
-let object = createStatefullObject(0)
+let object = createStatefulObject(0)
 
 object.display() // Value is: 0
 
@@ -715,7 +715,7 @@ The thing to note here is that we cannot access `value` inside our object withou
 
 ## Asynchronous interactions
 
-Until now everything we did was "synchronous". This means that the code executes each line as expected in the top-down order, but sometimes our functions are impossible to be able to return a value instantly (for examlple, imagine fething data from a server, you have to requesr, wait for the server to compute, then finally you receive the request). Since Javascript was designed for the browser enviroment and many of the interactions happens Asynchronously (Async) it was born with tools to deal with those scenarios bot the tools rapidly evolved, let's see how JS deals with async operations:
+Until now everything we did was "synchronous". This means that the code executes each line as expected in the top-down order, but sometimes our functions are impossible to be able to return a value instantly (for example, imagine fetching data from a server, you have to request, wait for the server to compute, then finally you receive the request). Since Javascript was designed for the browser environment and many of the interactions happens Asynchronously (Async) it was born with tools to deal with those scenarios bot the tools rapidly evolved, let's see how JS deals with async operations:
 
 ## Callbacks
 
@@ -728,13 +728,13 @@ let ding = () => {
 }
 
 setTimeout(ding, 1000)
-// setTimeout is a default JS function that waits (in our case 1000 miliseconds)
+// setTimeout is a default JS function that waits (in our case 1000 milliseconds)
 // and then executes the callback function that you send to it after waiting
 
 console.log('dong!')
 ```
 
-In the example above we'll see dong! before ding! and this is only possible because `ding` was put on hold by `setTimeout`, so `ding` acted as a callback. With this we can better understand how callbacks help dealing with executing code that doesnt follow the synchronous structure, but they have a problem that as soon as you start using them you`ll find out
+In the example above we'll see dong! before ding! and this is only possible because `ding` was put on hold by `setTimeout`, so `ding` acted as a callback. With this we can better understand how callbacks help dealing with executing code that doesn't follow the synchronous structure, but they have a problem that as soon as you start using them you`ll find out
 
 Lets meet our friend "callback hell"
 
@@ -828,7 +828,7 @@ Promise.resolve(5) // This is a neat way to start a promise chain!
     // this is where promises "fail", you would have to either
     // keep passing down everything you want or you have to create a
     // mutable variable in the upper scope to keep what you want to use later.
-    // both ways aren't neat solutions, so this is highly inconvenintent.
+    // both ways aren't neat solutions, so this is highly inconvenient.
     return
   })
 ```
@@ -886,13 +886,13 @@ aFunction() // This is just a Promise! "async function = Promise"
 
 In other to start getting serious and moving out of the console of our browser we should acquire some better coding tools. I recommned you go ahead and install:
 
-* [Visual Studio Code](https://code.visualstudio.com/) - A free and very powerfull code editor that works for many languages and it's easy to hop into.
+* [Visual Studio Code](https://code.visualstudio.com/) - A free and very powerful code editor that works for many languages and it's easy to hop into.
 
 * [Node.js + npm](https://nodejs.org/en/) - This will install both Node.js and npm in your system. Node.js is used to run javascript outside of your browser, npm is used to both install code from other and share yours.
 
 After doing that you should create a folder, open VSCode, and drag the folder into VSCode. This will make that folder become the project's root folder. Let's start by installing some package from npm that we want to use!
 
-Let's say we want to fetch someone's address given theyr zipcode. Here in Brazil zipcode is called "cep" and we have npm package called "cep-promise" that gives us a neat promise-based interface to fetch our zipcode.
+Let's say we want to fetch someone's address given their zipcode. Here in Brazil zipcode is called "cep" and we have npm package called "cep-promise" that gives us a neat promise-based interface to fetch our zipcode.
 
 1. First on your VSCode click Terminal -> New Terminal
 2. Then type `npm init` and fill up what you want but you can just spam enter
@@ -902,7 +902,7 @@ After that you'll see that some files were generated for us: `package.json` and 
 
 * `package.json` contains information about your project (given in `npm init`), you can write some bash scripts there as well, and it also contains a short list of dependencies in case you delete node_modules and wants to reinstall it. `npm install` without a package name install everything on the list.
 
-* `node_modules` contains all the files from the dependencies you installed. You normally dont send this file to other people, you simple send package.json and let them do `npm install` by themselves.
+* `node_modules` contains all the files from the dependencies you installed. You normally don't send this file to other people, you simple send package.json and let them do `npm install` by themselves.
 
 Now lets create a `newFile.js` to write or code:
 
@@ -926,19 +926,19 @@ You can install pretty much any package you want and be happy integrating stuff!
 
 ## Learn more
 
-This guide is simply a lightning-speed introduction to many concepts. There are thee references that I used to study JS myself and you'll find more information about the language either on them or at many different sources throrough the web. JS has grown so much and has so many tools that it's easy to find many wars on which is the better way to do something with JS, but I'd say you should focus on your own development as a developer and laran as many tools as you want to. The more tools you learn the better at solving problems you become, and eventually you'll get the hang by yourself on what tools are the best for what kind of scenario. I hope you had fun reading this and keep evolving your programming skills!
+This guide is simply a lightning-speed introduction to many concepts. There are thee references that I used to study JS myself and you'll find more information about the language either on them or at many different sources thorough the web. JS has grown so much and has so many tools that it's easy to find many wars on which is the better way to do something with JS, but I'd say you should focus on your own development as a developer and learn as many tools as you want to. The more tools you learn the better at solving problems you become, and eventually you'll get the hang by yourself on what tools are the best for what kind of scenario. I hope you had fun reading this and keep evolving your programming skills!
 
 * [Different ways to deal with Modules](https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/)  
-We've seen about "require" but modules are quite comples in JS since we have both browser and server enviroments so support, it's good to learn the differente ways people use to export code depending on their target platform and available tools. The most common ones today are CommonJS (require/module.exports) and ES Modules (import/export).
+We've seen about "require" but modules are quite complex in JS since we have both browser and server environments so support, it's good to learn the different ways people use to export code depending on their target platform and available tools. The most common ones today are CommonJS (require/module.exports) and ES Modules (import/export).
 
 * [Eloquent JavaScript](https://eloquentjavascript.net/)  
 This book will guide you much more in depth about most of the tools presented on this guide
 
 * [Javascript: The Definitive Guide](https://www.oreilly.com/library/view/javascript-the-definitive/9781491952016/)  
-This book is a huge guide that includes reference material on both Javascript and Brower-specific javascript
+This book is a huge guide that includes reference material on both Javascript and Browser-specific javascript
 
 * [Javascript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)  
-Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direcion that this guide took
+Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direction that this guide took
 
 
 ## What we didn't learn
