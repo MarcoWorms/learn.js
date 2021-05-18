@@ -855,9 +855,200 @@ functions is called "Closure"
 
 # Interacting with the world
 
+## Asynchronous interactions
+
+Until now everything we did was "synchronous". This means that the code executes
+each line as expected in the top-down order, but sometimes our functions are
+impossible to be able to return a value instantly (for examlple, imagine fething
+data from a server, you have to requesr, wait for the server to compute, then
+finally you receive the request). Since Javascript was designed for the browser
+enviroment and many of the interactions happens Asynchronously (Async) it was
+born with tools to deal with those scenarios bot the tools rapidly evolved,
+let's see how JS deals with async operations:
+
+## Callbacks
+
+Callback is the fundamental async mechanic that builds all the other tools we'll
+see. Today we avoid using callbacks because most of the modern tools implement
+promises (and therefore async/await), but here is how a callback works:
+
+```js
+
+let ding = () => {
+  console.log('ding!')
+}
+
+setTimeout(ding, 1000)
+// setTimeout is a default JS function that waits (in our case 1000 miliseconds)
+// and then executes the callback function that you send to it after waiting
+
+console.log('dong!')
+```
+
+In the example above we'll see dong! before ding! and this is only possible
+because `ding` was put on hold by `setTimeout`, so `ding` acted as a callback.
+With this we can better understand how callbacks help dealing with executing
+code that doesnt follow the synchronous structure, but they have a problem that
+as soon as you start using them you`ll find out
+
+lets meet our friend "callback hell"
+
+```js
+setTimeout(()) => {
+  setTimeout(()) => {
+    setTimeout(()) => {
+      // say hello to callback hell!!
+
+      // here we tried to chain up 3 functions that wait 1 second
+      // so after 3 seconds this part will be reached
+
+      // but this will only go deeper and deeper the more
+      // callbacks you need to chain :D so imagine chaining
+      // up 20 times!
+    }, 1000)
+  }, 1000)
+}, 1000)
+```
+
+so lets move on to the structure that swore to destroy the callback hell but
+instead also brought it's own type of hell:
+
+## Promises
+
+Promise is a structure that proposes to deal better with async interactions than
+callbacks, specially when you need to chain interactions. You can see a Promise
+as a "complex data type" just like arrays, objects, and functions.
+
+```js
+let p = new Promise(resolve => {
+  resolve(2)
+})
+
+console.log(p) // Promise
+
+p.then(x => console.log(`X is: ${x}`)) // X is: 2
+```
+
+The thing about promises is that once you throw a value inside a promise chain
+you can only access that value by using `.then` provided by the Promise type
+(much like map is provided by the Array type)
+
+Let's see how to convert a callback into a promise:
+
+```js
+
+let setTimeoutPromisified = waitTime => new Promise((resolve) => {
+  setTimeout(() => resolve("any data"), waitTime)
+})
+
+setTimeoutPromisified(1000)
+  .then((anyData) => {
+    console.log(anyData) // "any data"
+    return setTimeoutPromisified(1000)
+  })
+  .then(() => setTimeoutPromisified(1000))
+  .then(() => setTimeoutPromisified(1000))
+  .then(() => setTimeoutPromisified(1000))
+  .then(() => setTimeoutPromisified(1000))
+  .then(() => setTimeoutPromisified(1000))
+  .then(() => setTimeoutPromisified(1000))
+  .then(() => setTimeoutPromisified(1000))
+
+  // look how we dont go many levels deeper to
+  // achieve the same chain we had in the callback hell
+```
+
+Basically Promises solve the callback problem by giving you the structure of
+using .then() to declare what happens after something ends, and something ends
+by calling the `resolve` function (which is just a callback). Promises has many
+other properties that I wont go into now but they are worth looking into and
+will be referenced on this guides end.
+
+Let's see where Promises will make your life a bit difficult:
+
+```js
+Promise.resolve(5) // This is a neat way to start a promise chain!
+  .then(x => {
+    console.log(x) // 5
+    return "abc"
+  })
+  .then(y => {
+    console.log(y) // "abc"
+    return [1, 2, 3]
+  })
+  .then(z => {
+    console.log(z) // [1, 2, 3]
+    // what if we wanted to console log "x" or "y" here?
+    // this is where promises "fail", you would have to either
+    // keep passing down everything you want or you have to create a
+    // mutable variable in the upper scope to keep what you want to use later.
+    // both ways aren't neat solutions, so this is highly inconvenintent.
+    return
+  })
+```
+
+## Promises and Maps
+
+Before moving on to how to deal with async and solve the presented problem above
+I'd like to show you some cool programing moment. I'm gonna throw the code here
+and let you have your own thoughts:
+
+```js
+Promise.resolve(5)
+  .then(x => x * 2)
+  .then(x => x + 10)
+  .then(x => console.log(`X is ${x}`)) // X is 20
+
+[5]
+  .map(x => x * 2)
+  .map(x => x + 10)
+  .map(x => console.log(`X is ${x}`)) // X is 20
+```
+
+Can you spot the difference? Basically both Array and Promise are really special
+types that provides us with functions that work with its inner values and are
+always guaranteed to return the same type (Promise.then always return a Promise
+that guarantees to have .then, just like Array.map is always guarantees to
+return an Array). The only difference in both solution is that Promises accept
+async functions while array.map is strictly sync. In functional programming this
+concept of "types that are container to values and allow you to chain operations"
+is deeply explored along with the most obscure corners of math.
+
+## Async/Await
+
+Async await lets you write promises just like you would write synchronous code,
+and that's where we do the full circle from callbacks to being able to write
+code that looks mostly what all the code we wrote in the first 2 parts of this
+guide looked like. The cool thing about async/await is that it's just a more
+intuitive way to deal with promises, this means that all functions created with
+async are promises, and everything that is a promise can be awaited inside an
+async function. Let's see what this looks like:
+
+
+```js
+let setTimeoutPromisified = waitTime => new Promise((resolve) => {
+  setTimeout(() => resolve("any data"), waitTime)
+})
+
+let aFunction = async () => {
+  let data = await setTimeoutPromisified(1000)
+
+  // await can be used inside async functions and will not only wait
+  // for the promise to resolve but will also unwrap the value inside
+  // it and put it on the variable which we were not able to do before
+
+  console.log(data) // "any data" will be logged after 1 sec
+  // or
+  console.log(await setTimeoutPromisified(1000)) // "any data" will be logged after 2 sec
+  console.log(await setTimeoutPromisified(1000)) // "any data" will be logged after 3 sec
+  console.log(await setTimeoutPromisified(1000)) // "any data" will be logged after 4 sec
+}
+
+aFunction() // This is just a Promise! "async function = Promise"
+```
+
 to be written yet:
 
-* about async interactions
 * npm, node, and how to use other people's
 * where to learn more about the tools you've seen here
 * where to learn about the ones you didn't
