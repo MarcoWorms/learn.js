@@ -1,10 +1,37 @@
 # Learn.js
 
-<details>
-  <summary>The table of content is available in the top left corner of this document. Click here to see a reference image on how to find it.</summary>
-  
-  ![image](https://user-images.githubusercontent.com/7863230/118364980-2c0e5200-b571-11eb-8237-4c4355579de0.png)
-</details>
+- [Learn.js](#learnjs)
+  * [Help with revision](#help-with-revision)
+  * [Usage](#usage)
+- [Data types and structures](#data-types-and-structures)
+  * [Numbers](#numbers)
+  * [Math Operators](#math-operators)
+  * [Strings](#strings)
+  * [Booleans and Comparisons](#booleans-and-comparisons)
+  * [Empty values and Boolean conversion](#empty-values-and-boolean-conversion)
+  * [Variables](#variables)
+  * [Objects](#objects)
+  * [Arrays](#arrays)
+  * [Merge Objects or Arrays](#merge-objects-or-arrays)
+  * [Functions](#functions)
+  * [Conditional Operations](#conditional-operations)
+- [Leveling up](#leveling-up)
+  * [Map](#map)
+  * [Filter](#filter)
+  * [Chaining maps and filters](#chaining-maps-and-filters)
+  * [Reduce](#reduce)
+  * [Mutability](#mutability)
+  * [Mutations](#mutations)
+  * [Scopes and State Management](#scopes-and-state-management)
+- [Interacting with the world](#interacting-with-the-world)
+  * [Asynchronous interactions](#asynchronous-interactions)
+  * [Callbacks](#callbacks)
+  * [Promises](#promises)
+  * [Promises and Maps](#promises-and-maps)
+  * [Async/Await](#async-await)
+  * [Running other people's code](#running-other-people-s-code)
+  * [Learn more](#learn-more)
+  * [What we didn't learn](#what-we-didn-t-learn)
 
 ## Help with revision
 
