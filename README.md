@@ -6,6 +6,10 @@
   ![image](https://user-images.githubusercontent.com/7863230/118364980-2c0e5200-b571-11eb-8237-4c4355579de0.png)
 </details>
 
+## Help with revision
+
+Feel free to open issues/discussions or send pull requests if you find any typo, misinformation or wrong example! If you'd like to contribute with more content please open an issue so we can discuss beforehand to avoiding writing a lot of text that might not get merged into the final document.
+
 ## Usage
 
 If you copy any part of this guide inside the code blocks you will be able to paste it in a developer console and see the code output. To open a javascript developer console: open your web browser > press F12 > console tab. It's recommended to read this guide with the console open and fiddle with the code, this helps the learning process!
