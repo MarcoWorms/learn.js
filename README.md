@@ -742,14 +742,14 @@ Lets meet our friend "callback hell"
 setTimeout(()) => {
   setTimeout(()) => {
     setTimeout(()) => {
+      console.log('This will show up after 3 seconds')
       // say hello to callback hell!!
 
       // here we tried to chain up 3 functions that wait 1 second
-      // so after 3 seconds this part will be reached
-
       // but this will only go deeper and deeper the more
       // callbacks you need to chain :D so imagine chaining
-      // up 20 times!
+      // up 20 times! We'll see how Promises avoid creating
+      // deeper levels of identation later on.
     }, 1000)
   }, 1000)
 }, 1000)
@@ -791,11 +791,18 @@ setTimeoutPromisified(1000)
   })
   .then(() => setTimeoutPromisified(1000))
   .then(() => setTimeoutPromisified(1000))
+  .then(() => {
+     console.log('this will show up after 4 seconds passed')
+    return setTimeoutPromisified(1000)
+  })
   .then(() => setTimeoutPromisified(1000))
   .then(() => setTimeoutPromisified(1000))
   .then(() => setTimeoutPromisified(1000))
   .then(() => setTimeoutPromisified(1000))
   .then(() => setTimeoutPromisified(1000))
+  .then(() => {
+     console.log('this will show up after 10 seconds passed')
+  })
 
   // look how we dont go many levels deeper to
   // achieve the same chain we had in the callback hell
