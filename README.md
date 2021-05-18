@@ -1,7 +1,7 @@
 # Learn.js
 
 <details>
-  <summary>Table of Content</summary>
+  <summary>Click here to open the Table of Content</summary>
   
   - [Learn.js](#learnjs)
     * [Help with revision](#help-with-revision)
