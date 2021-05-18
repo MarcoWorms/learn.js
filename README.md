@@ -27,10 +27,9 @@
   * [Callbacks](#callbacks)
   * [Promises](#promises)
   * [Promises and Maps](#promises-and-maps)
-  * [Async/Await](#async-await)
-  * [Running other people's code](#running-other-people-s-code)
+  * [Async Await](#async-await)
+  * [Using foreign code](#using-foreign-code)
   * [Learn more](#learn-more)
-  * [What we didn't learn](#what-we-didn-t-learn)
 
 ## Help with revision
 
@@ -773,7 +772,7 @@ setTimeout(()) => {
       // but this will only go deeper and deeper the more
       // callbacks you need to chain :D so imagine chaining
       // up 20 times! We'll see how Promises avoid creating
-      // deeper levels of identation later on.
+      // deeper levels of indentation later on.
     }, 1000)
   }, 1000)
 }, 1000)
@@ -906,9 +905,9 @@ let aFunction = async () => {
 aFunction() // This is just a Promise! "async function = Promise"
 ```
 
-## Running other people's code
+## Using foreign code
 
-In other to start getting serious and moving out of the console of our browser we should acquire some better coding tools. I recommned you go ahead and install:
+In other to start getting serious and moving out of the console of our browser we should acquire some better coding tools. I recommend you go ahead and install:
 
 * [Visual Studio Code](https://code.visualstudio.com/) - A free and very powerful code editor that works for many languages and it's easy to hop into.
 
@@ -964,8 +963,7 @@ This book is a huge guide that includes reference material on both Javascript an
 * [Javascript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)  
 Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direction that this guide took
 
-
-## What we didn't learn
+### What we didn't learn
 
 Here is a list of thinks that you might want to study in other to better understand javascript as a whole and wasn't in this guide:
 
