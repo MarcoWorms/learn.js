@@ -921,14 +921,18 @@ You can install pretty much any package you want and be happy integrating stuff!
 
 This guide is simply a lightning-speed introduction to many concepts. There are thee references that I used to study JS myself and you'll find more information about the language either on them or at many different sources throrough the web. JS has grown so much and has so many tools that it's easy to find many wars on which is the better way to do something with JS, but I'd say you should focus on your own development as a developer and laran as many tools as you want to. The more tools you learn the better at solving problems you become, and eventually you'll get the hang by yourself on what tools are the best for what kind of scenario. I hope you had fun reading this and keep evolving your programming skills!
 
+* [Different ways to deal with Modules](https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/)
+We've seen about "require" but modules are quite comples in JS since we have both browser and server enviroments so support, it's good to learn the differente ways people use to export code depending on their target platform and available tools. The most common ones today are CommonJS (require/module.exports) and ES Modules (import/export).
+
 * [Eloquent JavaScript](https://eloquentjavascript.net/)  
-This book will guide you much more in depth about most of the tools presented here
+This book will guide you much more in depth about most of the tools presented on this guide
 
 * [Javascript: The Definitive Guide](https://www.oreilly.com/library/view/javascript-the-definitive/9781491952016/)  
 This book is a huge guide that includes reference material on both Javascript and Brower-specific javascript
 
 * [Javascript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)  
 Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direcion that this guide took
+
 
 ## What we didn't learn
 
@@ -938,6 +942,6 @@ Here is a list of thinks that you might want to study in other to better underst
 
 * [Inheritance with the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-* [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-
 * [DOM](https://developer.mozilla.org/en-US/docs/Glossary/DOM)
+
+* [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
