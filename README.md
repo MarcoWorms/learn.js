@@ -642,7 +642,7 @@ let someFunc = () => {
 See how `someFunc` can access `x`. Lets see how this wouldn't be possible
 
 ```js
-let somefunc = () => {
+let someFunc = () => {
   let y = 1
 }
 
