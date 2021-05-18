@@ -21,7 +21,6 @@
   * [Chaining maps and filters](#chaining-maps-and-filters)
   * [Reduce](#reduce)
   * [Mutability](#mutability)
-  * [Mutations](#mutations)
   * [Scopes and State Management](#scopes-and-state-management)
 - [Interacting with the world](#interacting-with-the-world)
   * [Asynchronous interactions](#asynchronous-interactions)
@@ -616,8 +615,6 @@ Note that because reduce is not guaranteed to return an Array (it will return wh
 ## Mutability
 
 With all the tools above you are ready to transform anything into anything you want. I'd like to introduce you now to the concept of Mutability and Immutability so we can learn about state management, which will help us understand how to better manage our code
-
-## Mutations
 
 Mutation is the act of changing an existing variable without creating a new variable. Thorough this guide there were a few examples where a variable was declared with "let" and then later on it was reassigned to another variable, that is a mutation. Here are some examples of mutations:
 
