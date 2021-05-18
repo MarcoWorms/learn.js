@@ -69,7 +69,7 @@ Sequences of alphanumeric characters, delimited by ', " or `
 Both phrases bellow are the same. ` is a newer version of ' and " that allows strings to have line breaks and also allows for us to add variables (a concept still to be explained) inside them later on.
 
 ```js
-'this makes\nme hungry'
+"this makes\nme hungry"
 
 `this makes
 me hungry`
@@ -724,14 +724,14 @@ Callback is the fundamental async mechanic that builds all the other tools we'll
 ```js
 
 let ding = () => {
-  console.log('ding!')
+  console.log("ding!")
 }
 
 setTimeout(ding, 1000)
 // setTimeout is a default JS function that waits (in our case 1000 milliseconds)
 // and then executes the callback function that you send to it after waiting
 
-console.log('dong!')
+console.log("dong!")
 ```
 
 In the example above we'll see dong! before ding! and this is only possible because `ding` was put on hold by `setTimeout`, so `ding` acted as a callback. With this we can better understand how callbacks help dealing with executing code that doesn't follow the synchronous structure, but they have a problem that as soon as you start using them you`ll find out
@@ -742,7 +742,7 @@ Lets meet our friend "callback hell"
 setTimeout(()) => {
   setTimeout(()) => {
     setTimeout(()) => {
-      console.log('This will show up after 3 seconds')
+      console.log("This will show up after 3 seconds")
       // say hello to callback hell!!
 
       // here we tried to chain up 3 functions that wait 1 second
@@ -792,7 +792,7 @@ setTimeoutPromisified(1000)
   .then(() => setTimeoutPromisified(1000))
   .then(() => setTimeoutPromisified(1000))
   .then(() => {
-     console.log('this will show up after 4 seconds passed')
+     console.log("this will show up after 4 seconds passed")
     return setTimeoutPromisified(1000)
   })
   .then(() => setTimeoutPromisified(1000))
@@ -801,7 +801,7 @@ setTimeoutPromisified(1000)
   .then(() => setTimeoutPromisified(1000))
   .then(() => setTimeoutPromisified(1000))
   .then(() => {
-     console.log('this will show up after 10 seconds passed')
+     console.log("this will show up after 10 seconds passed")
   })
 
   // look how we dont go many levels deeper to
