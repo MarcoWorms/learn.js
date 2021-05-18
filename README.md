@@ -874,9 +874,9 @@ Promise.resolve(5)
 
 Can you spot the difference? Basically both Array and Promise are really special types that provides us with functions that work with its inner values and are always guaranteed to return the same type (Promise.then always return a Promise that guarantees to have .then, just like Array.map is always guarantees to return an Array). The only difference in both solution is that Promises accept async functions while array.map is strictly sync. In functional programming this concept of "types that are container to values and allow you to chain operations" is deeply explored along with the most obscure corners of math.
 
-## Async/Await
+## Async Await
 
-Async await lets you write promises just like you would write synchronous code, and that's where we do the full circle from callbacks to being able to write code that looks mostly what all the code we wrote in the first 2 parts of this guide looked like. The cool thing about async/await is that it's just a more intuitive way to deal with promises, this means that all functions created with async are promises, and everything that is a promise can be awaited inside an async function. Let's see what this looks like:
+async/await lets you write promises just like you would write synchronous code, and that's where we do the full circle from callbacks to being able to write code that looks mostly what all the code we wrote in the first 2 parts of this guide looked like. The cool thing about async/await is that it's just a more intuitive way to deal with promises, this means that all functions created with async are promises, and everything that is a promise can be awaited inside an async function. Let's see what this looks like:
 
 
 ```js
