@@ -973,7 +973,7 @@ I have not personally used this one in the past but it does look pretty neat!
 
 ### What we didn't learn
 
-Here is a list of thinks that you might want to study in other to better understand javascript as a whole and wasn't in this guide:
+Here is a list of things that you might want to study in other to better understand javascript as a whole and wasn't in this guide:
 
 * [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 
