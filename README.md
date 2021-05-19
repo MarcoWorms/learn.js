@@ -968,6 +968,9 @@ This book is a huge guide that includes reference material on both Javascript an
 * [Javascript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)  
 Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direction that this guide took
 
+* [The Modern JavaScript Tutorial](https://javascript.info/)
+I have not personally used this one in the past but it does look pretty neat!
+
 ### What we didn't learn
 
 Here is a list of thinks that you might want to study in other to better understand javascript as a whole and wasn't in this guide:
