@@ -36,7 +36,7 @@
 </details>
 
 
-## Help with revision
+## Contribute
 
 Feel free to open issues/discussions or send pull requests if you find any typo, misinformation or wrong example! If you'd like to contribute with more content please open an issue so we can discuss beforehand to avoiding writing a lot of text that might not get merged into the final document.
 
