@@ -981,4 +981,6 @@ Here is a list of thinks that you might want to study in other to better underst
 
 * [DOM](https://developer.mozilla.org/en-US/docs/Glossary/DOM)
 
+* [Loops](https://www.javatpoint.com/es6-loops)
+
 * [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
