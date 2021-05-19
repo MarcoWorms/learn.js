@@ -629,7 +629,7 @@ a = a + 1 // This is a mutation
 let b = { value: "something" } // No mutation happened here
 b.value = "something else" // This is a mutation
 
-let c = [1, 2, 3] // This is a mutation
+let c = [1, 2, 3] // No mutation happened here
 c[0] = c[0] + 1 // This is a mutation
 c[1] = c[1] + 1 // This is a mutation
 c[2] = c[2] + 1 // This is a mutation
