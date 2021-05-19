@@ -643,10 +643,10 @@ let a = 1
 let newA = a + 1
 
 let b = { value: "something" }
-let newB = { value: "something else", ...b }
+let newB = { ...b, value: "something else" } // {value: "something else"}
 
 let c = [1, 2, 3]
-let newC = c.map(x => x + 1) //[4, 5, 6]
+let newC = c.map(x => x + 1) // [2, 3, 4]
 ```
 
 Note: map, filter, and reduce will always produce new values instead of mutating the old value, this is part of why they are amazing tools
