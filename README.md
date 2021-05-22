@@ -172,7 +172,7 @@ NaN // Not a Number, shows up when you do math with a type that is not a number
 
 ```
 
-ALL other values will always be truthy, meaning that they will be considered as true on boolean operations
+ALL other values will always be truthy, meaning that they will be considered as true on boolean operations.
 
 ## Variables
 
@@ -246,7 +246,7 @@ Object is a really powerful data type in JS, as you learn the next data types (A
 let shirt = {
   color: "blue",
   price: 19.90,
-  description: "A blue t-shirt, you'll never need another one in your life!"
+  description: "A blue t-shirt, you'll never need another one in your life!",
 }
 
 shirt.price // 19.90
@@ -261,12 +261,12 @@ let setOfClothes = {
   shirt: {
     color: "blue",
     price: 19.90,
-    description: "A blue t-shirt, you'll never need another one in your life!"
+    description: "A blue t-shirt, you'll never need another one in your life!",
   },
   pants: {
     color: "red",
     price: 19.70,
-    description: "A red pant!"
+    description: "A red pant!",
   },
 }
 
@@ -305,12 +305,12 @@ let objectB = { name: "Orange", size: 1 }
 
 let objectAB = {
   ...objectA,
-  ...objectB
+  ...objectB,
 } // { name: "Orange", size: 1 }
 
 let objectBA = {
   ...objectB,
-  ...objectA
+  ...objectA,
 } // { name: "Avocado", size: 1 }
 
 let anotherObject = {
@@ -363,7 +363,7 @@ addNumbers(1, 2) // 3
 addNumbers("a", "b") // "ab"
 ```
 
-OMG we just went full illegal and used `addNumbers` to actually add strings! JS is a really permissive language and with great power comes great responsibility. Functions by default do not care about what types you send when you use them, since in js the + operator can also be used by strings our function will work, but it's our responsibility to build the tools that we want if we want to prevent unwanted scenarios (or if you want strong type safety in JS you can use something like rescript, elm, or typescript)
+OMG we just went full illegal and used `addNumbers` to actually add strings! JS is a really permissive language and with great power comes great responsibility. Functions by default do not care about what types you send when you use them, since in js the + operator can also be used by strings our function will work, but it's our responsibility to build the tools that we want if we want to prevent unwanted scenarios (or if you want strong type safety in JS you can use something like rescript, elm, or typescript).
 
 We can write functions in a shorter way thanks to the new versions of javascript:
 
@@ -376,7 +376,7 @@ let divide = (x, y) => {
 let multiply = (x, y) => x * y
 ```
 
-This is a really neat way to write short functions, if you omit {} it will automatically return the value
+This is a really neat way to write short functions, if you omit {} it will automatically return the value.
 
 We use many functions that are standard from JS in order to write our programs. A classic one is:
 
@@ -466,11 +466,11 @@ Let's see another example but this time using a more complex data type inside ou
 let anotherList = [
   {
     name: 'Apple',
-    tastes: 'Really Good'
+    tastes: 'Really Good',
   },
   {
     name: 'Banana',
-    tastes: 'Really Good'
+    tastes: 'Really Good',
   },
 ]
 ```
@@ -489,11 +489,11 @@ console.log(anotherNewList) /*
 [
   {
     name: 'Apple',
-    tastes: 'Really Bad'
+    tastes: 'Really Bad',
   },
   {
     name: 'Banana',
-    tastes: 'Really Bad'
+    tastes: 'Really Bad',
   },
 ]
 */
@@ -531,11 +531,11 @@ And we could also have more complex types inside the array
 let moreFruits = [
   {
     name: "Apple",
-    tastes: "Really Good"
+    tastes: "Really Good",
   },
   {
     name: "Banana",
-    tastes: "Just Good"
+    tastes: "Just Good",
   },
 ]
 
@@ -561,10 +561,10 @@ Let's say we want to generate a list that has only Sports products and we'll als
 products
   .filter(product => product.category === "Sports")
   .map(product => ({ ...product, price: product.price * 0.8 }))
-// [{
-//  { name: "Ball", category: "Sports", price: 8 }, { name: "Shirt", category:
-//  "Clothes", price: 40 },
-// }]
+// [
+//  { name: "Ball", category: "Sports", price: 8 },
+//  { name: "Shirt", category: "Clothes", price: 40 },
+// ]
 ```
 
 Remember: you can chain maps and filters as much as you want!
@@ -607,7 +607,7 @@ In this case we reduced an array to a number but you could use any type and any 
 let someFunctions = [
   x => x + 2,
   x => x * 10,
-  x => `The final result is ${x}`
+  x => `The final result is ${x}`,
 ]
 
 someFunctions.reduce((accumulator, func) => func(accumulator), 30)
@@ -618,7 +618,7 @@ Note that because reduce is not guaranteed to return an Array (it will return wh
 
 ## Mutability
 
-With all the tools above you are ready to transform anything into anything you want. I'd like to introduce you now to the concept of Mutability and Immutability so we can learn about state management, which will help us understand how to better manage our code
+With all the tools above you are ready to transform anything into anything you want. I'd like to introduce you now to the concept of Mutability and Immutability so we can learn about state management, which will help us understand how to better manage our code.
 
 Mutation is the act of changing an existing variable without creating a new variable. Thorough this guide there were a few examples where a variable was declared with "let" and then later on it was reassigned to another variable, that is a mutation. Here are some examples of mutations:
 
@@ -714,12 +714,12 @@ let createStatefulObject = (initialValue) => {
 
   return {
     increment: (amount = 1) => {
-    // "amount = 1" means that if amount is not sent it will be defaulted to 1
+      // "amount = 1" means that if amount is not sent it will be defaulted to 1
       value = value + amount
     },
     display: () => {
       console.log(`Value is: ${value}`)
-    }
+    },
   }
 
 }
@@ -737,13 +737,13 @@ object.increment(5)
 object.display() // Value is: 6
 ```
 
-The thing to note here is that we cannot access `value` inside our object without using the functions that we returned. This is a technique that uses the parent function scope to hold a variable that can be used by all inner functions but cannot be accessed by outside. This property of sharing scopes between functions is called "Closure"
+The thing to note here is that we cannot access `value` inside our object without using the functions that we returned. This is a technique that uses the parent function scope to hold a variable that can be used by all inner functions but cannot be accessed by outside. This property of sharing scopes between functions is called "Closure".
 
 # Interacting with the world
 
 ## Asynchronous interactions
 
-Until now everything we did was "synchronous". This means that the code executes each line as expected in the top-down order, but sometimes our functions are impossible to be able to return a value instantly (for example, imagine fetching data from a server, you have to request, wait for the server to compute, then finally you receive the request). Since Javascript was designed for the browser environment and many of the interactions happens Asynchronously (Async) it was born with tools to deal with those scenarios bot the tools rapidly evolved, let's see how JS deals with async operations:
+Until now everything we did was "synchronous". This means that the code executes each line as expected in the top-down order, but sometimes our functions are impossible to be able to return a value instantly (for example, imagine fetching data from a server, you have to request, wait for the server to compute, then finally you receive the response). Since Javascript was designed for the browser environment and many of the interactions happens Asynchronously (Async) it was born with tools to deal with those scenarios but the tools rapidly evolved, let's see how JS deals with async operations:
 
 ## Callbacks
 
@@ -762,7 +762,7 @@ setTimeout(ding, 1000)
 console.log("dong!")
 ```
 
-In the example above we'll see dong! before ding! and this is only possible because `ding` was put on hold by `setTimeout`, so `ding` acted as a callback. With this we can better understand how callbacks help dealing with executing code that doesn't follow the synchronous structure, but they have a problem that as soon as you start using them you`ll find out
+In the example above we'll see dong! before ding! and this is only possible because `ding` was put on hold by `setTimeout`, so `ding` acted as a callback. With this we can better understand how callbacks help dealing with executing code that doesn't follow the synchronous structure, but they have a problem that as soon as you start using them you`ll find out.
 
 Lets meet our friend "callback hell"
 
@@ -793,15 +793,15 @@ Promise is a structure that proposes to deal better with async interactions than
 let p = new Promise(resolve => {
   resolve(2)
 })
-// we wont go through "new" in this guide but you'll find
-// reference on this guide's end if you want to lean about it
+// we won't go through "new" in this guide but you'll find
+// reference on this guide's end if you want to learn about it
 
 console.log(p) // Promise
 
 p.then(x => console.log(`X is: ${x}`)) // X is: 2
 ```
 
-The thing about promises is that once you throw a value inside a promise chain you can only access that value by using `.then` provided by the Promise type (much like map is provided by the Array type)
+The thing about promises is that once you throw a value inside a promise chain you can only access that value by using `.then` provided by the Promise type (much like map is provided by the Array type).
 
 Let's see how to convert a callback into a promise:
 
@@ -832,11 +832,11 @@ setTimeoutPromisified(1000)
      console.log("this will show up after 10 seconds passed")
   })
 
-  // look how we dont go many levels deeper to
+  // look how we don't go many levels deeper to
   // achieve the same chain we had in the callback hell
 ```
 
-Basically Promises solve the callback problem by giving you the structure of using .then() to declare what happens after something ends, and something ends by calling the `resolve` function (which is just a callback). Promises has many other properties that I wont go into now but they are worth looking into and will be referenced on this guides end.
+Basically Promises solve the callback problem by giving you the structure of using .then() to declare what happens after something ends, and something ends by calling the `resolve` function (which is just a callback). Promises have many other properties that I won't go into now but they are worth looking into and will be referenced on this guide's end.
 
 Let's see where Promises will make your life a bit difficult:
 
@@ -912,7 +912,7 @@ aFunction() // This is just a Promise! "async function = Promise"
 
 ## Using foreign code
 
-In other to start getting serious and moving out of the console of our browser we should acquire some better coding tools. I recommend you go ahead and install:
+In order to start getting serious and moving out of the console of our browser we should acquire some better coding tools. I recommend you go ahead and install:
 
 * [Visual Studio Code](https://code.visualstudio.com/) - A free and very powerful code editor that works for many languages and it's easy to hop into.
 
@@ -936,7 +936,7 @@ Now lets create a `newFile.js` to write or code:
 
 ```js
 const cep = require('cep-promise')
-// 'require' is a special node.js keyword that 
+// 'require' is a predefined node.js function that
 // allows us to import installed packages
 
 cep('5010000') // this is our example zipcode
@@ -954,26 +954,26 @@ You can install pretty much any package you want and be happy integrating stuff!
 
 ## Learn more
 
-This guide is simply a lightning-speed introduction to many concepts. There are thee references that I used to study JS myself and you'll find more information about the language either on them or at many different sources thorough the web. JS has grown so much and has so many tools that it's easy to find many wars on which is the better way to do something with JS, but I'd say you should focus on your own development as a developer and learn as many tools as you want to. The more tools you learn the better at solving problems you become, and eventually you'll get the hang by yourself on what tools are the best for what kind of scenario. I hope you had fun reading this and keep evolving your programming skills!
+This guide is simply a lightning-speed introduction to many concepts. There are three references that I used to study JS myself and you'll find more information about the language either on them or at many different sources thorough the web. JS has grown so much and has so many tools that it's easy to find many wars on which is the better way to do something with JS, but I'd say you should focus on your own development as a developer and learn as many tools as you want to. The more tools you learn the better at solving problems you become, and eventually you'll get the hang by yourself on what tools are the best for what kind of scenario. I hope you had fun reading this and keep evolving your programming skills!
 
 * [Different ways to deal with Modules](https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/)  
 We've seen about "require" but modules are quite complex in JS since we have both browser and server environments so support, it's good to learn the different ways people use to export code depending on their target platform and available tools. The most common ones today are CommonJS (require/module.exports) and ES Modules (import/export).
 
 * [Eloquent JavaScript](https://eloquentjavascript.net/)  
-This book will guide you much more in depth about most of the tools presented on this guide
+This book will guide you much more in depth about most of the tools presented on this guide.
 
 * [Javascript: The Definitive Guide](https://www.oreilly.com/library/view/javascript-the-definitive/9781491952016/)  
-This book is a huge guide that includes reference material on both Javascript and Browser-specific javascript
+This book is a huge guide that includes reference material on both Javascript and Browser-specific javascript.
 
 * [Javascript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)  
-Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direction that this guide took
+Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direction that this guide took.
 
 * [The Modern JavaScript Tutorial](https://javascript.info/)  
 I have not personally used this one in the past but it does look pretty neat!
 
 ### What we didn't learn
 
-Here is a list of things that you might want to study in other to better understand javascript as a whole and wasn't in this guide:
+Here is a list of things that you might want to study in order to better understand javascript as a whole and wasn't in this guide:
 
 * [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 
