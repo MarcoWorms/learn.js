@@ -562,8 +562,8 @@ products
   .filter(product => product.category === "Sports")
   .map(product => ({ ...product, price: product.price * 0.8 }))
 // [
-//  { name: "Ball", category: "Sports", price: 8 }, { name: "Shirt", category:
-//  "Clothes", price: 40 },
+//  { name: "Ball", category: "Sports", price: 8 },
+//  { name: "Shirt", category: "Clothes", price: 40 },
 // ]
 ```
 
