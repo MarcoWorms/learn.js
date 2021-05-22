@@ -743,7 +743,7 @@ The thing to note here is that we cannot access `value` inside our object withou
 
 ## Asynchronous interactions
 
-Until now everything we did was "synchronous". This means that the code executes each line as expected in the top-down order, but sometimes our functions are impossible to be able to return a value instantly (for example, imagine fetching data from a server, you have to request, wait for the server to compute, then finally you receive the request). Since Javascript was designed for the browser environment and many of the interactions happens Asynchronously (Async) it was born with tools to deal with those scenarios bot the tools rapidly evolved, let's see how JS deals with async operations:
+Until now everything we did was "synchronous". This means that the code executes each line as expected in the top-down order, but sometimes our functions are impossible to be able to return a value instantly (for example, imagine fetching data from a server, you have to request, wait for the server to compute, then finally you receive the response). Since Javascript was designed for the browser environment and many of the interactions happens Asynchronously (Async) it was born with tools to deal with those scenarios bot the tools rapidly evolved, let's see how JS deals with async operations:
 
 ## Callbacks
 
