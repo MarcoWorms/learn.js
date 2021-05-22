@@ -936,7 +936,7 @@ Now lets create a `newFile.js` to write or code:
 
 ```js
 const cep = require('cep-promise')
-// 'require' is a special node.js keyword that 
+// 'require' is a predefined node.js function that
 // allows us to import installed packages
 
 cep('5010000') // this is our example zipcode
