@@ -912,7 +912,7 @@ aFunction() // This is just a Promise! "async function = Promise"
 
 ## Using foreign code
 
-In other to start getting serious and moving out of the console of our browser we should acquire some better coding tools. I recommend you go ahead and install:
+In order to start getting serious and moving out of the console of our browser we should acquire some better coding tools. I recommend you go ahead and install:
 
 * [Visual Studio Code](https://code.visualstudio.com/) - A free and very powerful code editor that works for many languages and it's easy to hop into.
 
@@ -973,7 +973,7 @@ I have not personally used this one in the past but it does look pretty neat!
 
 ### What we didn't learn
 
-Here is a list of things that you might want to study in other to better understand javascript as a whole and wasn't in this guide:
+Here is a list of things that you might want to study in order to better understand javascript as a whole and wasn't in this guide:
 
 * [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 
