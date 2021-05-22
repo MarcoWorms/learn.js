@@ -743,7 +743,7 @@ The thing to note here is that we cannot access `value` inside our object withou
 
 ## Asynchronous interactions
 
-Until now everything we did was "synchronous". This means that the code executes each line as expected in the top-down order, but sometimes our functions are impossible to be able to return a value instantly (for example, imagine fetching data from a server, you have to request, wait for the server to compute, then finally you receive the response). Since Javascript was designed for the browser environment and many of the interactions happens Asynchronously (Async) it was born with tools to deal with those scenarios bot the tools rapidly evolved, let's see how JS deals with async operations:
+Until now everything we did was "synchronous". This means that the code executes each line as expected in the top-down order, but sometimes our functions are impossible to be able to return a value instantly (for example, imagine fetching data from a server, you have to request, wait for the server to compute, then finally you receive the response). Since Javascript was designed for the browser environment and many of the interactions happens Asynchronously (Async) it was born with tools to deal with those scenarios but the tools rapidly evolved, let's see how JS deals with async operations:
 
 ## Callbacks
 
@@ -793,8 +793,8 @@ Promise is a structure that proposes to deal better with async interactions than
 let p = new Promise(resolve => {
   resolve(2)
 })
-// we wont go through "new" in this guide but you'll find
-// reference on this guide's end if you want to lean about it
+// we won't go through "new" in this guide but you'll find
+// reference on this guide's end if you want to learn about it
 
 console.log(p) // Promise
 
@@ -832,11 +832,11 @@ setTimeoutPromisified(1000)
      console.log("this will show up after 10 seconds passed")
   })
 
-  // look how we dont go many levels deeper to
+  // look how we don't go many levels deeper to
   // achieve the same chain we had in the callback hell
 ```
 
-Basically Promises solve the callback problem by giving you the structure of using .then() to declare what happens after something ends, and something ends by calling the `resolve` function (which is just a callback). Promises has many other properties that I wont go into now but they are worth looking into and will be referenced on this guides end.
+Basically Promises solve the callback problem by giving you the structure of using .then() to declare what happens after something ends, and something ends by calling the `resolve` function (which is just a callback). Promises has many other properties that I won't go into now but they are worth looking into and will be referenced on this guides end.
 
 Let's see where Promises will make your life a bit difficult:
 
@@ -954,7 +954,7 @@ You can install pretty much any package you want and be happy integrating stuff!
 
 ## Learn more
 
-This guide is simply a lightning-speed introduction to many concepts. There are thee references that I used to study JS myself and you'll find more information about the language either on them or at many different sources thorough the web. JS has grown so much and has so many tools that it's easy to find many wars on which is the better way to do something with JS, but I'd say you should focus on your own development as a developer and learn as many tools as you want to. The more tools you learn the better at solving problems you become, and eventually you'll get the hang by yourself on what tools are the best for what kind of scenario. I hope you had fun reading this and keep evolving your programming skills!
+This guide is simply a lightning-speed introduction to many concepts. There are three references that I used to study JS myself and you'll find more information about the language either on them or at many different sources thorough the web. JS has grown so much and has so many tools that it's easy to find many wars on which is the better way to do something with JS, but I'd say you should focus on your own development as a developer and learn as many tools as you want to. The more tools you learn the better at solving problems you become, and eventually you'll get the hang by yourself on what tools are the best for what kind of scenario. I hope you had fun reading this and keep evolving your programming skills!
 
 * [Different ways to deal with Modules](https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/)  
 We've seen about "require" but modules are quite complex in JS since we have both browser and server environments so support, it's good to learn the different ways people use to export code depending on their target platform and available tools. The most common ones today are CommonJS (require/module.exports) and ES Modules (import/export).
