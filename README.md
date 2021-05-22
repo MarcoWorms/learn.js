@@ -246,7 +246,7 @@ Object is a really powerful data type in JS, as you learn the next data types (A
 let shirt = {
   color: "blue",
   price: 19.90,
-  description: "A blue t-shirt, you'll never need another one in your life!"
+  description: "A blue t-shirt, you'll never need another one in your life!",
 }
 
 shirt.price // 19.90
@@ -261,12 +261,12 @@ let setOfClothes = {
   shirt: {
     color: "blue",
     price: 19.90,
-    description: "A blue t-shirt, you'll never need another one in your life!"
+    description: "A blue t-shirt, you'll never need another one in your life!",
   },
   pants: {
     color: "red",
     price: 19.70,
-    description: "A red pant!"
+    description: "A red pant!",
   },
 }
 
@@ -305,12 +305,12 @@ let objectB = { name: "Orange", size: 1 }
 
 let objectAB = {
   ...objectA,
-  ...objectB
+  ...objectB,
 } // { name: "Orange", size: 1 }
 
 let objectBA = {
   ...objectB,
-  ...objectA
+  ...objectA,
 } // { name: "Avocado", size: 1 }
 
 let anotherObject = {
@@ -466,11 +466,11 @@ Let's see another example but this time using a more complex data type inside ou
 let anotherList = [
   {
     name: 'Apple',
-    tastes: 'Really Good'
+    tastes: 'Really Good',
   },
   {
     name: 'Banana',
-    tastes: 'Really Good'
+    tastes: 'Really Good',
   },
 ]
 ```
@@ -489,11 +489,11 @@ console.log(anotherNewList) /*
 [
   {
     name: 'Apple',
-    tastes: 'Really Bad'
+    tastes: 'Really Bad',
   },
   {
     name: 'Banana',
-    tastes: 'Really Bad'
+    tastes: 'Really Bad',
   },
 ]
 */
@@ -531,11 +531,11 @@ And we could also have more complex types inside the array
 let moreFruits = [
   {
     name: "Apple",
-    tastes: "Really Good"
+    tastes: "Really Good",
   },
   {
     name: "Banana",
-    tastes: "Just Good"
+    tastes: "Just Good",
   },
 ]
 
@@ -607,7 +607,7 @@ In this case we reduced an array to a number but you could use any type and any 
 let someFunctions = [
   x => x + 2,
   x => x * 10,
-  x => `The final result is ${x}`
+  x => `The final result is ${x}`,
 ]
 
 someFunctions.reduce((accumulator, func) => func(accumulator), 30)
@@ -719,7 +719,7 @@ let createStatefulObject = (initialValue) => {
     },
     display: () => {
       console.log(`Value is: ${value}`)
-    }
+    },
   }
 
 }
