@@ -836,7 +836,7 @@ setTimeoutPromisified(1000)
   // achieve the same chain we had in the callback hell
 ```
 
-Basically Promises solve the callback problem by giving you the structure of using .then() to declare what happens after something ends, and something ends by calling the `resolve` function (which is just a callback). Promises have many other properties that I won't go into now but they are worth looking into and will be referenced on this guides end.
+Basically Promises solve the callback problem by giving you the structure of using .then() to declare what happens after something ends, and something ends by calling the `resolve` function (which is just a callback). Promises have many other properties that I won't go into now but they are worth looking into and will be referenced on this guide's end.
 
 Let's see where Promises will make your life a bit difficult:
 
