@@ -561,10 +561,10 @@ Let's say we want to generate a list that has only Sports products and we'll als
 products
   .filter(product => product.category === "Sports")
   .map(product => ({ ...product, price: product.price * 0.8 }))
-// [{
+// [
 //  { name: "Ball", category: "Sports", price: 8 }, { name: "Shirt", category:
 //  "Clothes", price: 40 },
-// }]
+// ]
 ```
 
 Remember: you can chain maps and filters as much as you want!
