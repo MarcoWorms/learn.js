@@ -172,7 +172,7 @@ NaN // Not a Number, shows up when you do math with a type that is not a number
 
 ```
 
-ALL other values will always be truthy, meaning that they will be considered as true on boolean operations
+ALL other values will always be truthy, meaning that they will be considered as true on boolean operations.
 
 ## Variables
 
@@ -363,7 +363,7 @@ addNumbers(1, 2) // 3
 addNumbers("a", "b") // "ab"
 ```
 
-OMG we just went full illegal and used `addNumbers` to actually add strings! JS is a really permissive language and with great power comes great responsibility. Functions by default do not care about what types you send when you use them, since in js the + operator can also be used by strings our function will work, but it's our responsibility to build the tools that we want if we want to prevent unwanted scenarios (or if you want strong type safety in JS you can use something like rescript, elm, or typescript)
+OMG we just went full illegal and used `addNumbers` to actually add strings! JS is a really permissive language and with great power comes great responsibility. Functions by default do not care about what types you send when you use them, since in js the + operator can also be used by strings our function will work, but it's our responsibility to build the tools that we want if we want to prevent unwanted scenarios (or if you want strong type safety in JS you can use something like rescript, elm, or typescript).
 
 We can write functions in a shorter way thanks to the new versions of javascript:
 
@@ -376,7 +376,7 @@ let divide = (x, y) => {
 let multiply = (x, y) => x * y
 ```
 
-This is a really neat way to write short functions, if you omit {} it will automatically return the value
+This is a really neat way to write short functions, if you omit {} it will automatically return the value.
 
 We use many functions that are standard from JS in order to write our programs. A classic one is:
 
@@ -618,7 +618,7 @@ Note that because reduce is not guaranteed to return an Array (it will return wh
 
 ## Mutability
 
-With all the tools above you are ready to transform anything into anything you want. I'd like to introduce you now to the concept of Mutability and Immutability so we can learn about state management, which will help us understand how to better manage our code
+With all the tools above you are ready to transform anything into anything you want. I'd like to introduce you now to the concept of Mutability and Immutability so we can learn about state management, which will help us understand how to better manage our code.
 
 Mutation is the act of changing an existing variable without creating a new variable. Thorough this guide there were a few examples where a variable was declared with "let" and then later on it was reassigned to another variable, that is a mutation. Here are some examples of mutations:
 
@@ -737,7 +737,7 @@ object.increment(5)
 object.display() // Value is: 6
 ```
 
-The thing to note here is that we cannot access `value` inside our object without using the functions that we returned. This is a technique that uses the parent function scope to hold a variable that can be used by all inner functions but cannot be accessed by outside. This property of sharing scopes between functions is called "Closure"
+The thing to note here is that we cannot access `value` inside our object without using the functions that we returned. This is a technique that uses the parent function scope to hold a variable that can be used by all inner functions but cannot be accessed by outside. This property of sharing scopes between functions is called "Closure".
 
 # Interacting with the world
 
@@ -762,7 +762,7 @@ setTimeout(ding, 1000)
 console.log("dong!")
 ```
 
-In the example above we'll see dong! before ding! and this is only possible because `ding` was put on hold by `setTimeout`, so `ding` acted as a callback. With this we can better understand how callbacks help dealing with executing code that doesn't follow the synchronous structure, but they have a problem that as soon as you start using them you`ll find out
+In the example above we'll see dong! before ding! and this is only possible because `ding` was put on hold by `setTimeout`, so `ding` acted as a callback. With this we can better understand how callbacks help dealing with executing code that doesn't follow the synchronous structure, but they have a problem that as soon as you start using them you`ll find out.
 
 Lets meet our friend "callback hell"
 
@@ -801,7 +801,7 @@ console.log(p) // Promise
 p.then(x => console.log(`X is: ${x}`)) // X is: 2
 ```
 
-The thing about promises is that once you throw a value inside a promise chain you can only access that value by using `.then` provided by the Promise type (much like map is provided by the Array type)
+The thing about promises is that once you throw a value inside a promise chain you can only access that value by using `.then` provided by the Promise type (much like map is provided by the Array type).
 
 Let's see how to convert a callback into a promise:
 
@@ -960,13 +960,13 @@ This guide is simply a lightning-speed introduction to many concepts. There are 
 We've seen about "require" but modules are quite complex in JS since we have both browser and server environments so support, it's good to learn the different ways people use to export code depending on their target platform and available tools. The most common ones today are CommonJS (require/module.exports) and ES Modules (import/export).
 
 * [Eloquent JavaScript](https://eloquentjavascript.net/)  
-This book will guide you much more in depth about most of the tools presented on this guide
+This book will guide you much more in depth about most of the tools presented on this guide.
 
 * [Javascript: The Definitive Guide](https://www.oreilly.com/library/view/javascript-the-definitive/9781491952016/)  
-This book is a huge guide that includes reference material on both Javascript and Browser-specific javascript
+This book is a huge guide that includes reference material on both Javascript and Browser-specific javascript.
 
 * [Javascript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)  
-Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direction that this guide took
+Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direction that this guide took.
 
 * [The Modern JavaScript Tutorial](https://javascript.info/)  
 I have not personally used this one in the past but it does look pretty neat!
