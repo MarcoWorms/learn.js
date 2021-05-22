@@ -714,7 +714,7 @@ let createStatefulObject = (initialValue) => {
 
   return {
     increment: (amount = 1) => {
-    // "amount = 1" means that if amount is not sent it will be defaulted to 1
+      // "amount = 1" means that if amount is not sent it will be defaulted to 1
       value = value + amount
     },
     display: () => {
