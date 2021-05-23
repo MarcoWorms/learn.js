@@ -1086,6 +1086,6 @@ Here is a list of things that you might want to study in order to better underst
 
 * [DOM](https://developer.mozilla.org/en-US/docs/Glossary/DOM)
 
-* [Loops](https://www.javatpoint.com/es6-loops)
+* [Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 * [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
