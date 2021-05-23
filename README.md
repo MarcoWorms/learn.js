@@ -1076,6 +1076,9 @@ I have not personally used this one in the past but it does look pretty neat!
 
 * [Safe Recursion with Trampoline in JavaScript](https://levelup.gitconnected.com/safe-recursion-with-trampoline-in-javascript-dbec2b903022)
 
+* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md)
+Probably one of the most complete and popular free books on JS. It covers most of the language, and all of the dirty parts in detail like `this`, `prototype`, `async`, etc.
+
 ### What we didn't learn
 
 Here is a list of things that you might want to study in order to better understand javascript as a whole and wasn't in this guide:
