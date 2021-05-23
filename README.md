@@ -93,7 +93,7 @@ Sequences of alphanumeric characters, delimited by ', " or `
 "pancake cake"
 ```
 
-Both phrases bellow are the same. ` is a newer version of ' and " that allows strings to have line breaks and also allows for us to add variables (a concept still to be explained) inside them later on.
+Both phrases below are the same. ` is a newer version of ' and " that allows strings to have line breaks and also allows for us to add variables (a concept still to be explained) inside them later on.
 
 ```js
 "this makes\nme hungry"
@@ -615,7 +615,7 @@ Note that because reduce is not guaranteed to return an Array (it will return wh
 
 ## Recursion and Loops
 
-Sometimes we need to repeat actions and if either map or reduce seems to not fit we can use both methods bellow
+Sometimes we need to repeat actions and if either map or reduce seems to not fit we can use both methods below
 
 ```js
 // Loop
@@ -762,7 +762,7 @@ The thing to note here is that we cannot access `value` inside our object withou
 
 ## This is the secret of functions
 
-Functions have a secret they don't want you to know, but I'll tell you, `this` is the secret. There is implicit argument that every function has by default named `this`, and they way it behaves depends on who calls your function or where did you declare it. `this` is normally used by some techniques to store scope like demonstrated on the section above, but we'll avoid using it in this guide since we can achieve the same results with other techniques. We can override `this` by using `call` and `bind` functions:
+Functions have a secret they don't want you to know, but I'll tell you, `this` is the secret. There is an implicit argument that every function has by default named `this`, and the way it behaves depends on who calls your function or where did you declare it. `this` is normally used by some techniques to store scope like demonstrated on the section above, but we'll avoid using it in this guide since we can achieve the same results with other techniques. We can override `this` by using `call` and `bind` functions:
 
 ```js
 let thisFunc = function () { console.log(this) }
@@ -786,7 +786,7 @@ bindExample() // 3
 bindExample() // 3
 ```
 
-So we can use `call` to override `this` and execute a function or we can use `bind` to override `this` and create a new function that well remember that value for whenever we want to use it. The cool thing about `bind` and `call` is that they also accept the other variables of your function, you can ignore the `this` usage in order to use `bind` to simply store values in functions arguments for later usage. This technique is called "partial application" and it looks like this in practice:
+So we can use `call` to override `this` and execute a function or we can use `bind` to override `this` and create a new function that will remember that value for whenever we want to use it. The cool thing about `bind` and `call` is that they also accept the other variables of your function, you can ignore the `this` usage in order to use `bind` to simply store values in functions arguments for later usage. This technique is called "partial application" and it looks like this in practice:
 
 ```js
 let sum = (x, y) => x + y
