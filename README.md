@@ -34,7 +34,7 @@
   * [Async Await](#async-await)
   * [Using foreign code](#using-foreign-code)
   * [Learn more](#learn-more)
-    + [What we didn't learn](#what-we-didn-t-learn)
+    + [What we didn't learn](#what-we-didnt-learn)
 </details>
 
 ## Usage
