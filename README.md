@@ -616,6 +616,30 @@ someFunctions.reduce((accumulator, func) => func(accumulator), 30)
 
 Note that because reduce is not guaranteed to return an Array (it will return whatever type you want as the accumulator) you have to be careful when chaining maps and filters after using a reduce.
 
+## Recursion and Loops
+
+Sometimes we need to repeat actions and if either map or reduce seems to not fit we can use both methods bellow
+
+```js
+// Loop
+let x = 0
+while (x < 5) {
+  console.log(x)
+  x = x + 1
+} // Will log 0, 1, 2, 3, 4 in separate lines in your console
+
+// Recursion
+let aFunc = x => {
+  if (x < 5) {
+    console.log(x)
+    return aFunc(x + 1)
+  }
+}
+aFunc(0) // Will log 0, 1, 2, 3, 4 in separate lines in your console
+```
+
+Loops take a more "mutable" approach while "recursion" looks more like the functions we learned. The only problem with recursion in JS is that for large loops (for example more than 10 thousand elements but it depends on many things) if you don't know what you are doing you might "explode the function call stack". There are many ways to avoid this, but the most efficient one I've seen simply convert your recursions into loops, this technique is called "trampoline" (also linked on a reference in the end of this guide), we wont dig further into this but feel free to use both loops and recursion, you'll learn better about the usage of both if you try them in practice and decide for yourself the best use-case for them!
+
 ## Mutability
 
 With all the tools above you are ready to transform anything into anything you want. I'd like to introduce you now to the concept of Mutability and Immutability so we can learn about state management, which will help us understand how to better manage our code
@@ -739,6 +763,80 @@ object.display() // Value is: 6
 
 The thing to note here is that we cannot access `value` inside our object without using the functions that we returned. This is a technique that uses the parent function scope to hold a variable that can be used by all inner functions but cannot be accessed by outside. This property of sharing scopes between functions is called "Closure"
 
+## This is the secret of functions
+
+Functions have a secret they don't want you to know, but I'll tell you, `this` is the secret. There is implicit argument that every function has by default named `this`, and they way it behaves depends on who calls your function or where did you declare it. `this` is normally used by some techniques to store scope like demonstrated on the section above, but we'll avoid using it in this guide since we can achieve the same results with other techniques. We can override `this` by using `call` and `bind` functions:
+
+```js
+let thisFunc = () => console.log(this)
+
+thisFunc() // Window (In the browser this will log the Window object)
+
+thisFunc.call(1) // 1
+thisFunc.call("ayy") // "ayy"
+
+let bindExample = thisFunc.bind(3)
+
+bindExample() // 3
+bindExample() // 3
+
+let boundSomething = thisFunc.bind("something")
+
+boundSomething() // "something"
+boundSomething() // "something"
+bindExample() // 3
+bindExample() // 3
+```
+
+So we can use `call` to override `this` and execute a function or we can use `bind` to override `this` and create a new function that well remember that value for whenever we want to use it. The cool thing about `bind` and `call` is that they also accept the other variables of your function, you can ignore the `this` usage in order to use `bind` to simply store values in functions arguments for later usage. This technique is called "partial application" and it looks like this in practice:
+
+```js
+let sum = (x, y) => x + y
+
+sum(1, 2) // 3
+
+let sum5 = sum.bind(null, 5)
+// The first parameter is `this`, the second is `x`, the third is `y`, etc...
+
+sum5(10) // 15
+sum5(2) // 7
+```
+
+In the example above we used bind to simply store a number, but since this is JS you can use to store anything you want. Partial application is a handy way of creating new more specific functions based on any function that you already have, this is a really powerful tool! When you move on to start building larger applications you can use "partial application" to solve many common problems such as "dependency injection":
+
+```js
+let dependencies = {
+  database: {
+    createUser: query => { console.log(`User Created: ${query}`) },
+  },
+}
+
+let routes = [
+  {
+    name: 'createCharacter',
+    handler: (dependencies, query) => {
+      dependencies.database.createUser(query)
+    }
+  },
+  {
+    name: 'attackMonster',
+    handler: (dependencies, query) => {
+      // this would handle some logic on attacking a monster
+    }
+  },
+]
+
+let boundRoutes = routes.map(route => ({
+  ...route,
+  handler: route.handler.bind(null, dependencies)
+}))
+
+boundRoutes[0].handler("Blorms")
+// User Created: Blorms
+```
+
+The example above might be really painful to understand if you are still learning the ropes, but it's an example on how you can use `bind` in order to partially apply a dependency object into a bunch of routes that will be used by us. This example is really rough and incomplete but the goal was to focus on the `bind` usage rather than providing a real dependency scenario, we'll need the next section in order to deal with those:
+
 # Interacting with the world
 
 ## Asynchronous interactions
@@ -810,6 +908,13 @@ Let's see how to convert a callback into a promise:
 let setTimeoutPromisified = waitTime => new Promise((resolve) => {
   setTimeout(() => resolve("any data"), waitTime)
 })
+// `new` is something we won't be looking at on this guide but basically
+// it provides the functions `this` with many special properties that has
+// no use for us at the moment in this example. You can think that
+// `new Something()`
+// could be internally rewritten to be used as something like
+// `createSomething()`
+// like we've done with `createStatefulObject` a couple sections back
 
 setTimeoutPromisified(1000)
   .then((anyData) => {
@@ -967,6 +1072,8 @@ This book is a huge guide that includes reference material on both Javascript an
 
 * [Javascript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)  
 Although this book is 80% about bad parts, when it does get to the good parts it helps you understand some of the direction that this guide took
+
+* [Safe Recursion with Trampoline in JavaScript](https://levelup.gitconnected.com/safe-recursion-with-trampoline-in-javascript-dbec2b903022)
 
 ### What we didn't learn
 
