@@ -2,9 +2,9 @@
 
 <details>
   <summary>Click here to open the Table of Content</summary>
+
+* [Contributing](./CONTRIBUTING.md)
   
-  * [Contribute](#contribute)
-  * [Usage](#usage)
 - [Data types and structures](#data-types-and-structures)
   * [Numbers](#numbers)
   * [Math Operators](#math-operators)
@@ -36,11 +36,6 @@
   * [Learn more](#learn-more)
     + [What we didn't learn](#what-we-didn-t-learn)
 </details>
-
-
-## Contribute
-
-Feel free to open issues/discussions or send pull requests if you find any typo, misinformation or wrong example! If you'd like to contribute with more content please open an issue so we can discuss beforehand to avoiding writing a lot of text that might not get merged into the final document.
 
 ## Usage
 
