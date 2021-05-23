@@ -812,13 +812,13 @@ let dependencies = {
 let routes = [
   {
     name: 'createCharacter',
-    handler: (dependencies, query) => {
+    handler: function (dependencies, query) {
       dependencies.database.createUser(query)
     }
   },
   {
     name: 'attackMonster',
-    handler: (dependencies, query) => {
+    handler: function (dependencies, query) {
       // this would handle some logic on attacking a monster
     }
   },
