@@ -153,7 +153,7 @@ undefined
 null
 ```
 
-Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposely added there because it will be filled later on. You should bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are considered "truthy" or "falsy" when used as booleans:
+Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposely added there because it will be filled later on. You shouldn't bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are considered "truthy" or "falsy" when used as booleans:
 
 The following values are always falsy, meaning that when used as booleans they are considered as false:
 
