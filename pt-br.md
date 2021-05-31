@@ -1,76 +1,44 @@
 # Learn.js
 
-🇬🇧 This this is the english version of learn.js! Just keep scrolling :D
-🇧🇷 [Clique aqui para ir para a versão português: Aprenda.js](./pt-br.md)
+🇧🇷 Essa é a versão português do Aprenda.js! Continue para baixo para ver o conteúdo :)
+🇬🇧 [Click here to move to the english verion: Learn.js](./README.md)
 
 <details>
-  <summary>Click here to open the Table of Content</summary>
+  <summary>Clique aqui para abrir a tabela de conteúdo</summary>
 
-* [Contributing](./CONTRIBUTING.md)
-  
-- [Data types and structures](#data-types-and-structures)
-  * [Numbers](#numbers)
-  * [Math Operators](#math-operators)
-  * [Strings](#strings)
-  * [Booleans and Comparisons](#booleans-and-comparisons)
-  * [Empty values and Boolean conversion](#empty-values-and-boolean-conversion)
-  * [Variables](#variables)
-  * [Objects](#objects)
-  * [Arrays](#arrays)
-  * [Merge Objects or Arrays](#merge-objects-or-arrays)
-  * [Functions](#functions)
-  * [Conditional Operations](#conditional-operations)
-- [Leveling up](#leveling-up)
-  * [Map](#map)
-  * [Filter](#filter)
-  * [Chaining maps and filters](#chaining-maps-and-filters)
-  * [Reduce](#reduce)
-  * [Recursion and Loops](#recursion-and-loops)
-  * [Mutability](#mutability)
-  * [Scopes and State Management](#scopes-and-state-management)
-  * [This is the secret of functions](#this-is-the-secret-of-functions)
-- [Interacting with the world](#interacting-with-the-world)
-  * [Asynchronous interactions](#asynchronous-interactions)
-  * [Callbacks](#callbacks)
-  * [Promises](#promises)
-  * [Promises and Maps](#promises-and-maps)
-  * [Async Await](#async-await)
-  * [Using foreign code](#using-foreign-code)
-  * [Learn more](#learn-more)
-    + [What we didn't learn](#what-we-didn-t-learn)
 </details>
 
-## Usage
+## Usando
 
-You can copy any part of this guide inside the code blocks and paste it in a developer console and see the code output. To open a javascript developer console: open your web browser > press F12 > console tab. It's recommended to read this guide with the console open and fiddle with the code, this helps the learning process!
+Você pode copiar qualquer código desse guia e colar ele no console de desenvolvedor do seu navegador para ver o output. Para abrir o console de desenvolvedor abra seu navegador de internet padrão > aperte f12 > console. É recomendado ler esse guia com o console aberto para que você possa ir brincando com os pedaços de código, isso vai te ajudar bastante no processo de aprendizado!
 
 <details>
-  <summary>Click here to see a preview image of how the console looks like</summary>
+  <summary>Clique aqui para ver uma imagem de exemplo de como o console se parece</summary>
   
   ![image](https://user-images.githubusercontent.com/7863230/118431315-692b2f00-b6ac-11eb-9aa5-ebcf5185e40a.png)
 </details>
 
-# Data types and structures
+# Tipos e estruturas de dados
 
-Programming always involve some kind of transformation of data. You can store data, count it, apply math operations, trigger other flows, but the basic mechanism of programing languages is always about reading some data and then executing some kind of logic with it.
+Programar sempre envolve alguma forma de transformação de dados. Você pode guardar, contar, aplicar operações matemáticas, engatilhar fluxos em outros fluxos, mas o mecanismo básico de linguagens de programação é sempre sobre ler dados e a partir deles executar algum tipo de lógica
 
-In Javascript we have the following data types and structures:
+No javascript temos os seguintes tipos e estruturas de dados
 
-## Numbers
+## Números (Number)
 
-In javascript every number falls into the "Number" type and there is no distinction between integers and floating points
+No javascript todos os números são do tipo "Number" e não existe diferença de tipos entre números inteiros e decimais
 
 ```js
 1
 81072865287.331
 19.35
 
-// this is a comment, everything after // in the same line is ignored!
+// isso é um comentário, tudo depois do // na mesma linha será ignorado!
 ```
 
-## Math Operators
+## Operadores Matemáticos
 
-We can start to write some very simple programs if we know about Numbers and operators. Lets write some programs:
+Nós ja podemos começar a escrever alguns programas bem simples se soubermos sobre números e operadores. Vamos escrever alguns:
 
 ```js
 2 + 4 // 6
@@ -81,80 +49,82 @@ We can start to write some very simple programs if we know about Numbers and ope
 5 % 4 // 1 (the remainder of the integer division)
 ```
 
-All 5 lines above could be seen as 5 really small programs. Each of them is very limited but they do perform a purposeful transformation in some initial data. These small programs are still quite unusable for and end user since a basic calculator would solve this types of problems, but the purpose of calling them programs is to try to consolidate the view that a program is simply a transformation of some given data. As we learn more complex data structures we'll quickly achieve some problem-solving techniques that no calculator can solve!
+Cada uma das 5 linhas acima pode ser vista como 5 programas bem pequenos. Cada um deles é bem limitado mas eles propositalmente transformam algum dado em outro. No momento esses programas não são usáveis por outras pessoas ja que uma simples calculadora faz muito mais do que fizemos no momento e com muito mais acessibilidade, mas o propósito de chamarmos cada linha de programa é consolidar a visão que um programa é apenas uma transformação de dados. Conforme aprendemos estruturas mais complexas de dados nós atingiremos habilidades de resolução de problemas que nenhuma calculadora chega perto de resolver!
 
-## Strings
+## Palavras (String)
 
-Sequences of alphanumeric characters, delimited by ', " or `
+Uma String é uma sequência de caractéres alfanuméricos. Strings são delimitadas por ', ", ou `
 
-' or " are used for strings that has no literal linebrakes (you can add them with "\n" special character)
+' ou " são usados para strings que não tem quebra de linha (você pode adicionar uma quebra de linha nelas com o cacter especial \n)
 
 ```js
 'pan'
-"cake"
-'pan cake'
-"pancake cake"
+"queca"
+'pan queca'
+"panqueca queca"
 ```
 
-Both phrases bellow are the same. ` is a newer version of ' and " that allows strings to have line breaks and also allows for us to add variables (a concept still to be explained) inside them later on.
+Ambas as frases abaixo são as mesmas: ` é uma nova versão do ' e " que permite Strings terem quebras de linha e também nos premite mais pra frente colocar variáveis dentro do texto
 
 ```js
-"this makes\nme hungry"
+"eu estou\ncom fome"
 
-`this makes
-me hungry`
+`eu estou
+com fome`
 ```
 
-## Booleans and Comparisons
+## Booleans e Comparações
 
-Some might say life is relative, but not for booleans. A boolean is a value that is either true or false
+Pra alguns muitas coisas na vida são relativas, mas não para as Booleans. Uma Boolean é um valor que é ou verdadeiro ou falso
 
 ```js
-true
-false
+true // verdadeiro
+false // falso
 ```
 
-You can inverse a boolean value with the ! operator
+Você pode inverter Booleans com o operador !
 
 ```js
 !true // false
 !false // true
 ```
 
-You can also produce boolean values by making comparisons with these operators
+Você pode produzir valores do tipo booleano fazendo comparações usando esses operadores:
 
 ```js
-1 === 1 // true (equals)
-1 !== 1 // false (not equals)
+1 === 1 // true (igual)
+1 !== 1 // false (não igual)
 
-4 > 3 // true (greater than)
-3 >= 3 // true (greater than or equals)
+4 > 3 // true (maior que)
+3 >= 3 // true (maior que ou igual)
 
-4 <= 3 // false (smaller than)
-4 < 3 // false (smaller than or equals)
+4 <= 3 // false (menor que)
+4 < 3 // false (menor que ou igual)
 ```
 
-Booleans are also used to make logical comparisons
+Booleans também são usadas para fazer comparações lógicas
 
 ```js
 true && true // true
-true && false // false (in any order)
+true && false // false (em qualquer ordem)
 false && false // false
 
 true || true // true
-true || false // true (in any order)
+true || false // true (em qualquer ordem)
 false || false // false
 
 ```
 
-## Empty values and Boolean conversion
+## Valores vazios e convertendo valores para Booleans
 
-We can also say something is actually nothing, and one of the worst parts of javascript is that we have 2 ways to say that
+Nós podemos dizer que um valor na verdade não é nada e uma das piores partes do javascripté que temos 2 formas de dizer isso:
 
 ```js
 undefined
 null
 ```
+
+Qual é a diferença? Grossamente o "undefined" aparece quando um valor nunca foi declarado pra começo de conversa. "null" é um valor que normalmente foi colocado ali por alguem que quis dizer que ali está vazio no momento (pode vir a ser preenchido no futuro ou não)
 
 Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposely added there because it will be filled later on. You should bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are considered "truthy" or "falsy" when used as booleans:
 
