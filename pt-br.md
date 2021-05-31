@@ -115,6 +115,10 @@ false || false // false
 
 ```
 
+# Traduzido até aqui, em breve o resto será traduzido também!
+
+------------
+
 ## Valores vazios e convertendo valores para Booleans
 
 Nós podemos dizer que um valor na verdade não é nada e uma das piores partes do javascripté que temos 2 formas de dizer isso:
