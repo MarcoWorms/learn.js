@@ -37,7 +37,7 @@
   * [Async Await](#async-await)
   * [Using foreign code](#using-foreign-code)
   * [Learn more](#learn-more)
-    + [What we didn't learn](#what-we-didn-t-learn)
+    + [What we didn't learn](#what-we-didnt-learn)
 </details>
 
 ## Usage
@@ -96,7 +96,7 @@ Sequences of alphanumeric characters, delimited by ', " or `
 "pancake cake"
 ```
 
-Both phrases bellow are the same. ` is a newer version of ' and " that allows strings to have line breaks and also allows for us to add variables (a concept still to be explained) inside them later on.
+Both phrases below are the same. ` is a newer version of ' and " that allows strings to have line breaks and also allows for us to add variables (a concept still to be explained) inside them later on.
 
 ```js
 "this makes\nme hungry"
@@ -156,7 +156,7 @@ undefined
 null
 ```
 
-Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposely added there because it will be filled later on. You should bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are considered "truthy" or "falsy" when used as booleans:
+Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposely added there because it will be filled later on. You shouldn't bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are considered "truthy" or "falsy" when used as booleans:
 
 The following values are always falsy, meaning that when used as booleans they are considered as false:
 
@@ -618,7 +618,7 @@ Note that because reduce is not guaranteed to return an Array (it will return wh
 
 ## Recursion and Loops
 
-Sometimes we need to repeat actions and if either map or reduce seems to not fit we can use both methods bellow
+Sometimes we need to repeat actions and if either map or reduce seems to not fit we can use both methods below
 
 ```js
 // Loop
@@ -765,7 +765,7 @@ The thing to note here is that we cannot access `value` inside our object withou
 
 ## This is the secret of functions
 
-Functions have a secret they don't want you to know, but I'll tell you, `this` is the secret. There is implicit argument that every function has by default named `this`, and they way it behaves depends on who calls your function or where did you declare it. `this` is normally used by some techniques to store scope like demonstrated on the section above, but we'll avoid using it in this guide since we can achieve the same results with other techniques. We can override `this` by using `call` and `bind` functions:
+Functions have a secret they don't want you to know, but I'll tell you, `this` is the secret. There is an implicit argument that every function has by default named `this`, and the way it behaves depends on who calls your function or where did you declare it. `this` is normally used by some techniques to store scope like demonstrated on the section above, but we'll avoid using it in this guide since we can achieve the same results with other techniques. We can override `this` by using `call` and `bind` functions:
 
 ```js
 let thisFunc = function () { console.log(this) }
@@ -789,7 +789,7 @@ bindExample() // 3
 bindExample() // 3
 ```
 
-So we can use `call` to override `this` and execute a function or we can use `bind` to override `this` and create a new function that well remember that value for whenever we want to use it. The cool thing about `bind` and `call` is that they also accept the other variables of your function, you can ignore the `this` usage in order to use `bind` to simply store values in functions arguments for later usage. This technique is called "partial application" and it looks like this in practice:
+So we can use `call` to override `this` and execute a function or we can use `bind` to override `this` and create a new function that will remember that value for whenever we want to use it. The cool thing about `bind` and `call` is that they also accept the other variables of your function, you can ignore the `this` usage in order to use `bind` to simply store values in functions arguments for later usage. This technique is called "partial application" and it looks like this in practice:
 
 ```js
 let sum = (x, y) => x + y
@@ -1079,6 +1079,9 @@ I have not personally used this one in the past but it does look pretty neat!
 
 * [Safe Recursion with Trampoline in JavaScript](https://levelup.gitconnected.com/safe-recursion-with-trampoline-in-javascript-dbec2b903022)
 
+* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md)
+Probably one of the most complete and popular free books on JS. It covers most of the language, and all of the dirty parts in detail like `this`, `prototype`, `async`, etc.
+
 ### What we didn't learn
 
 Here is a list of things that you might want to study in order to better understand javascript as a whole and wasn't in this guide:
@@ -1089,6 +1092,6 @@ Here is a list of things that you might want to study in order to better underst
 
 * [DOM](https://developer.mozilla.org/en-US/docs/Glossary/DOM)
 
-* [Loops](https://www.javatpoint.com/es6-loops)
+* [Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 * [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
