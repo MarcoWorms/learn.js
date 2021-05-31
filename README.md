@@ -1,7 +1,7 @@
 # Learn.js
 
-🇬🇧 This this is the english version of learn.js! Just keep scrolling :D
-🇧🇷 [Clique aqui para ir para a versão português: Aprenda.js](./pt-br.md)
+🇬🇧 This this is the english version of learn.js! Just keep scrolling :D  
+🇧🇷 [Clique aqui para ir para a versão português: Aprenda.js](./pt-br.md)  
 
 <details>
   <summary>Click here to open the Table of Content</summary>

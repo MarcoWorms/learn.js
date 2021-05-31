@@ -1,7 +1,7 @@
 # Learn.js
 
-🇧🇷 Essa é a versão português do Aprenda.js! Continue para baixo para ver o conteúdo :)
-🇬🇧 [Click here to move to the english verion: Learn.js](./README.md)
+🇧🇷 Essa é a versão português do Aprenda.js! Continue para baixo para ver o conteúdo :D  
+🇬🇧 [Click here to move to the english verion: Learn.js](./README.md)  
 
 <details>
   <summary>Clique aqui para abrir a tabela de conteúdo</summary>
