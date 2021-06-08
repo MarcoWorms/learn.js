@@ -2,6 +2,7 @@
 
 🇬🇧 This this is the english version of learn.js! Just keep scrolling :D  
 🇧🇷 [Clique aqui para ir para a versão português: Aprenda.js](./pt-br.md)  
+🇨🇳 [点此查看中文版本：Learn.js](./zh-cn.md)  
 
 <details>
   <summary>Click here to open the Table of Content</summary>

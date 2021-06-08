@@ -1,164 +1,196 @@
 # Learn.js
 
-🇧🇷 Essa é a versão português do Aprenda.js! Continue para baixo para ver o conteúdo :D  
+🇨🇳 本文是 learn.js 的中文版! Just keep scrolling :D  
 🇬🇧 [Click here to move to the english verion: Learn.js](./README.md)  
-🇨🇳 [点此查看中文版本：Learn.js](./zh-cn.md)  
+🇧🇷 [Clique aqui para ir para a versão português: Aprenda.js](./pt-br.md)  
 
 <details>
-  <summary>Clique aqui para abrir a tabela de conteúdo</summary>
+  <summary>点此查看内容目录</summary>
 
+* [贡献](./CONTRIBUTING.md)
+  
+- [数据类型和数据结构](#data-types-and-structures)
+  * [数字](#numbers)
+  * [数学运算](#math-operators)
+  * [字符串](#strings)
+  * [布尔值和比较运算](#booleans-and-comparisons)
+  * [布尔值和空值的转换](#empty-values-and-boolean-conversion)
+  * [变量](#variables)
+  * [对象](#objects)
+  * [数组](#arrays)
+  * [对象合并以及数组合并](#merge-objects-or-arrays)
+  * [函数](#functions)
+  * [逻辑运算](#conditional-operations)
+- [进阶](#leveling-up)
+  * [映射](#map)
+  * [过滤](#filter)
+  * [映射和过滤链式使用](#chaining-maps-and-filters)
+  * [Reduce](#reduce)
+  * [递归和循环](#recursion-and-loops)
+  * [可变性](#mutability)
+  * [作用域以及状态管理](#scopes-and-state-management)
+  * [函数中的 This](#this-is-the-secret-of-functions)
+- [Interacting with the world](#interacting-with-the-world)
+  * [异步](#asynchronous-interactions)
+  * [回调](#callbacks)
+  * [Promises](#promises)
+  * [Promises 和 Maps](#promises-and-maps)
+  * [Async Await](#async-await)
+  * [使用第三方代码](#using-foreign-code)
+  * [学习更多](#learn-more)
+    + [本文中还有什么没讲到](#what-we-didnt-learn)
 </details>
 
-## Usando
+## 使用 
 
-Você pode copiar qualquer código desse guia e colar ele no console de desenvolvedor do seu navegador para ver o output. Para abrir o console de desenvolvedor abra seu navegador de internet padrão > aperte f12 > console. É recomendado ler esse guia com o console aberto para que você possa ir brincando com os pedaços de código, isso vai te ajudar bastante no processo de aprendizado!
+在本篇指南中，任何一处代码都可以复制粘贴到开发人员工具中的控制台（Console）中执行并查看执行结果。我们可以通过：打开浏览器 > 按 F12 > 选择 Console 标签，三个步骤打开控制台。强烈建议各位朋友在学习本篇指南的同时，保持你的控制台处于打开状态，随时将代码粘贴进去执行并查看结果，这将更好的帮助我们提升学习效果。
+
 
 <details>
-  <summary>Clique aqui para ver uma imagem de exemplo de como o console se parece</summary>
+  <summary>点击这里查看控制台（Console）长什么样</summary>
   
   ![image](https://user-images.githubusercontent.com/7863230/118431315-692b2f00-b6ac-11eb-9aa5-ebcf5185e40a.png)
 </details>
 
-# Tipos e estruturas de dados
+# 数据类型和数据结构
 
-Programar sempre envolve alguma forma de transformação de dados. Você pode guardar, contar, aplicar operações matemáticas, engatilhar fluxos em outros fluxos, mas o mecanismo básico de linguagens de programação é sempre sobre ler dados e a partir deles executar algum tipo de lógica
+编程在绝大多数情况下，可以理解为对数据进行某种处理（如果你是个新手，记住这句话，随着你在编程行业的不断深入，这个概念会越来越清晰）。在编程的世界里，我们可以存储数据，对其计数，对其进行数学运算，触发一些别的流程，但是编程语言最基本的机制，其实就是读取一些数据，然后对数据执行某些逻辑得出结果。
 
-No javascript temos os seguintes tipos e estruturas de dados
+在 JavaScript 中我们有如下的数据类型和数据结构
 
-## Números (Number)
+## 数字（Numbers）
 
-No javascript todos os números são do tipo "Number" e não existe diferença de tipos entre números inteiros e decimais
+在 JavaScript 中，任何一个数字属于 `Number` 类型, 而且需要注意的是，整数和小数在JavaScript 没有任何区别。
 
 ```js
 1
 81072865287.331
 19.35
 
-// isso é um comentário, tudo depois do // na mesma linha será ignorado!
+// 这是一条注释, 同一行中，任何出现在 // 之后的内容都不会执行
 ```
 
-## Operadores Matemáticos
+## 数学运算
 
-Nós ja podemos começar a escrever alguns programas bem simples se soubermos sobre números e operadores. Vamos escrever alguns:
+如果我们知道数字和数学运算符，那么现在我们就可以开始写一些简单的程序。开写：
+
 
 ```js
 2 + 4 // 6
 (2 * 4) // 8
-// Parenthesis works as expected in math
+// 括号在这里的作用和数学运算中的括号完全一致
 2 / 4 // 0.5
 2 ** 4 // 16 (2 * 2 * 2 * 2)
-5 % 4 // 1 (the remainder of the integer division)
+5 % 4 // 1 (这里是算余数的，编程中一般把这个操作叫 取模 运算)
 ```
 
-Cada uma das 5 linhas acima pode ser vista como 5 programas bem pequenos. Cada um deles é bem limitado mas eles propositalmente transformam algum dado em outro. No momento esses programas não são usáveis por outras pessoas ja que uma simples calculadora faz muito mais do que fizemos no momento e com muito mais acessibilidade, mas o propósito de chamarmos cada linha de programa é consolidar a visão que um programa é apenas uma transformação de dados. Conforme aprendemos estruturas mais complexas de dados nós atingiremos habilidades de resolução de problemas que nenhuma calculadora chega perto de resolver!
+上面这五行代码可以说是非常简单的程序了。他们中的每一个功能都很有限，但需要注意的是，他们中的每一个都对原有数据进行了相应的处理。可能对于用户来讲这些程序根本没什么意义，甚至于一个小小的计算器就能解决上面这些问题，可是我们在这里写出来并不是要真的去解决用户的问题，而是为了给大家强化上面那个概念：“编程，其实就是对数据进行某种操作”。当后续我们学习了更复杂的数据结构之后，我们很快就能解决一些计算器没办法解决的问题了。
 
-## Palavras (String)
+## 字符串（Strings）
 
-Uma String é uma sequência de caractéres alfanuméricos. Strings são delimitadas por ', ", ou `
-
-' ou " são usados para strings que não tem quebra de linha (você pode adicionar uma quebra de linha nelas com o cacter especial \n)
+字符串指的就是一串文本字符（也可以叫字符序列），可以用`'`，`"` 或者 `` ` `` 包裹起来。
 
 ```js
 'pan'
-"queca"
-'pan queca'
-"panqueca queca"
+"cake"
+'pan cake'
+"pancake cake"
 ```
 
-Ambas as frases abaixo são as mesmas: ` é uma nova versão do ' e " que permite Strings terem quebras de linha e também nos premite mais pra frente colocar variáveis dentro do texto
+在使用 `'` 或 `"` 包裹起来的字符串中，不能有字面的换行符存在。但是我们可以用一个特殊字符来替代字面换行符，那就是 `\n`。
+
+`` ` `` 可以看做是一个新版的 `'` 或者 `"`，它的特别之处在于在可以在其中直接使用字面换行符，而且在后续的课程中我们会发现，它还允许我们在其中能使用变量（变量这个概念后续内容会讲到）。
+
+下面两种写法是本质是完全一样的：
 
 ```js
-"eu estou\ncom fome"
+"this makes\nme hungry"
 
-`eu estou
-com fome`
+`this makes
+me hungry`
 ```
 
-## Booleans e Comparações
+## 布尔值和比较运算
 
-Pra alguns muitas coisas na vida são relativas, mas não para as Booleans. Uma Boolean é um valor que é ou verdadeiro ou falso
+在生活中很少会有非黑即白的事情存在，很多东西都是相对的，参考系不同，结果也就不一样。但是，在 JavaScript 中有一个东西还真就是非黑即白的存在，那就是布尔值。一个布尔类型的数据的值只可能有两个，true (真) 或者 false (假)。
 
 ```js
-true // verdadeiro
-false // falso
+true
+false
 ```
 
-Você pode inverter Booleans com o operador !
+我们可以使用 `!` 对布尔值进行取反。
 
 ```js
 !true // false
 !false // true
 ```
 
-Você pode produzir valores do tipo booleano fazendo comparações usando esses operadores:
+当时用比较运算符的时候，产生的结果也是布尔值：
 
 ```js
-1 === 1 // true (igual)
-1 !== 1 // false (não igual)
+1 === 1 // true (判断相等)
+1 !== 1 // false (判断不等)
 
-4 > 3 // true (maior que)
-3 >= 3 // true (maior que ou igual)
+4 > 3 // true (判断是否大于)
+3 >= 3 // true (判断是否大于等于)
 
-4 <= 3 // false (menor que)
-4 < 3 // false (menor que ou igual)
+4 <= 3 // false (判断是否小于)
+4 < 3 // false (判断是否小于等于)
 ```
 
-Booleans também são usadas para fazer comparações lógicas
+布尔值也可以用作逻辑运算。
 
 ```js
-true && true // true
-true && false // false (em qualquer ordem)
+// && 逻辑与，可以理解为并且，当两个数据同为 true 时 结果才为 true
+true && true // true     
+true && false // false (哪个在前哪个在后不影响结果)
 false && false // false
 
+// || 逻辑或，可以理解为或者，当两个数据中只要有一个是 true 时 结果都为 true
 true || true // true
-true || false // true (em qualquer ordem)
+true || false // true (哪个在前哪个在后不影响结果)
 false || false // false
 
 ```
 
-# Traduzido até aqui, em breve o resto será traduzido também!
+## 空值和布尔值之间的转换
 
-------------
-
-## Valores vazios e convertendo valores para Booleans
-
-Nós podemos dizer que um valor na verdade não é nada e uma das piores partes do javascripté que temos 2 formas de dizer isso:
+在 JavaScript 中表示一个数据为空值得方式有两种：
 
 ```js
 undefined
 null
 ```
 
-Qual é a diferença? Grossamente o "undefined" aparece quando um valor nunca foi declarado pra começo de conversa. "null" é um valor que normalmente foi colocado ali por alguem que quis dizer que ali está vazio no momento (pode vir a ser preenchido no futuro ou não)
+那么这两种方式有什么区别呢？当一个值从一开始就没有被定义的时候，一般就会出现 `undefined`。`null` 通常不会自然存在，都是人为设置的值，在之后的操作中可能会为其设置新的值。我们现在不需要在这个事情上花费太多精力，只需要知道 JavaScript 中有这两个空值，并且在参与逻辑运算时，这两个空值都会被当做 `false` 来处理。
 
-Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposely added there because it will be filled later on. You should bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are considered "truthy" or "falsy" when used as booleans:
-
-The following values are always falsy, meaning that when used as booleans they are considered as false:
+下面的值在被当做布尔值使用时，结果总是 false。
 
 ```js
 false
-0 // (zero)
-'' // (empty string)
+0 // (零)
+'' // (空字符串)
 ""
 ``
 null
 undefined
-NaN // Not a Number, shows up when you do math with a type that is not a number
+NaN // Not a Number, 不是一个数字，一般是在我们用非数字进行数学运算时产生的。
 
 ```
 
-ALL other values will always be truthy, meaning that they will be considered as true on boolean operations.
+除过上面这些值，JavaScript 其他值，在当做布尔值使用时，永远都是 true。
 
 ## Variables
 
-Now that we know about data types let's learn how to store those types in your computer memory so you can access them by your program later on
+现在，我们已经知道了数据类型相关的内容，接下来我们一起学习怎么把这些类型的数据存储到你的计算机内存中，一遍后续在你的程序中使用他们。
 
 ```js
 
-let x // (is the same as) let x = undefined
+let x // 和 let x = undefined 等价
 let y = 4
 let someValue = "a string"
-let anotherValue = 4 < 3 // in other words, anotherValue = false
+let anotherValue = 4 < 3 // 换种方式就是 anotherValue = false
 
 y // 4
 someValue // "a string"
@@ -593,7 +625,7 @@ Note that because reduce is not guaranteed to return an Array (it will return wh
 
 ## Recursion and Loops
 
-Sometimes we need to repeat actions and if either map or reduce seems to not fit we can use both methods bellow
+Sometimes we need to repeat actions and if either map or reduce seems to not fit we can use both methods below
 
 ```js
 // Loop
@@ -740,7 +772,7 @@ The thing to note here is that we cannot access `value` inside our object withou
 
 ## This is the secret of functions
 
-Functions have a secret they don't want you to know, but I'll tell you, `this` is the secret. There is implicit argument that every function has by default named `this`, and they way it behaves depends on who calls your function or where did you declare it. `this` is normally used by some techniques to store scope like demonstrated on the section above, but we'll avoid using it in this guide since we can achieve the same results with other techniques. We can override `this` by using `call` and `bind` functions:
+Functions have a secret they don't want you to know, but I'll tell you, `this` is the secret. There is an implicit argument that every function has by default named `this`, and the way it behaves depends on who calls your function or where did you declare it. `this` is normally used by some techniques to store scope like demonstrated on the section above, but we'll avoid using it in this guide since we can achieve the same results with other techniques. We can override `this` by using `call` and `bind` functions:
 
 ```js
 let thisFunc = function () { console.log(this) }
@@ -764,7 +796,7 @@ bindExample() // 3
 bindExample() // 3
 ```
 
-So we can use `call` to override `this` and execute a function or we can use `bind` to override `this` and create a new function that well remember that value for whenever we want to use it. The cool thing about `bind` and `call` is that they also accept the other variables of your function, you can ignore the `this` usage in order to use `bind` to simply store values in functions arguments for later usage. This technique is called "partial application" and it looks like this in practice:
+So we can use `call` to override `this` and execute a function or we can use `bind` to override `this` and create a new function that will remember that value for whenever we want to use it. The cool thing about `bind` and `call` is that they also accept the other variables of your function, you can ignore the `this` usage in order to use `bind` to simply store values in functions arguments for later usage. This technique is called "partial application" and it looks like this in practice:
 
 ```js
 let sum = (x, y) => x + y
@@ -1054,6 +1086,9 @@ I have not personally used this one in the past but it does look pretty neat!
 
 * [Safe Recursion with Trampoline in JavaScript](https://levelup.gitconnected.com/safe-recursion-with-trampoline-in-javascript-dbec2b903022)
 
+* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md)
+Probably one of the most complete and popular free books on JS. It covers most of the language, and all of the dirty parts in detail like `this`, `prototype`, `async`, etc.
+
 ### What we didn't learn
 
 Here is a list of things that you might want to study in order to better understand javascript as a whole and wasn't in this guide:
@@ -1064,6 +1099,6 @@ Here is a list of things that you might want to study in order to better underst
 
 * [DOM](https://developer.mozilla.org/en-US/docs/Glossary/DOM)
 
-* [Loops](https://www.javatpoint.com/es6-loops)
+* [Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 * [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
