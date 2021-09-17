@@ -68,7 +68,7 @@ In javascript every number falls into the "Number" type and there is no distinct
 
 // this is a comment, everything after // in the same line is ignored!
 ```
-
+* [Read More about Numbers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 ## Math Operators
 
 We can start to write some very simple programs if we know about Numbers and operators. Lets write some programs:
@@ -83,6 +83,8 @@ We can start to write some very simple programs if we know about Numbers and ope
 ```
 
 All 5 lines above could be seen as 5 really small programs. Each of them is very limited but they do perform a purposeful transformation in some initial data. These small programs are still quite unusable for and end user since a basic calculator would solve this types of problems, but the purpose of calling them programs is to try to consolidate the view that a program is simply a transformation of some given data. As we learn more complex data structures we'll quickly achieve some problem-solving techniques that no calculator can solve!
+
+* [Read More about Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
 ## Strings
 
@@ -105,7 +107,7 @@ Both phrases below are the same. ` is a newer version of ' and " that allows str
 `this makes
 me hungry`
 ```
-
+* [Read More about Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 ## Booleans and Comparisons
 
 Some might say life is relative, but not for booleans. A boolean is a value that is either true or false
@@ -175,6 +177,8 @@ NaN // Not a Number, shows up when you do math with a type that is not a number
 
 ALL other values will always be truthy, meaning that they will be considered as true on boolean operations.
 
+* [Read More about Booleans](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+
 ## Variables
 
 Now that we know about data types let's learn how to store those types in your computer memory so you can access them by your program later on
@@ -211,6 +215,8 @@ It's highly not recommended to use math operators for any values that are not Nu
 `${someValue} ${someValue}` // "a string a string"
 
 ```
+
+* [Read More about Variables](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables)
 
 ## Objects
 
@@ -275,6 +281,7 @@ setOfClothes.shirt.color // "blue"
 setOfClothes.pants.color // "red"
 
 ```
+* [Read More about Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
 ## Arrays 
 
@@ -295,6 +302,8 @@ listOfFruits.length // 3
 ```
 
 Arrays and Lists are extremely useful in many scenarios, specially when you want to apply operations to a large amount of data that has the same type We'll dive deeper into them later.
+
+* [Read More about Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ## Merge Objects or Arrays
 
@@ -387,6 +396,8 @@ console.log("Hi there!")
 
 `console.log` is a default function that will print a value into your console. Until now we've been typing and returning values one by one, when running a program with many lines and values we often use console.log to debug or describe actions in our developer console.
 
+* [Read More about Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+
 ## Conditional Operations
 
 One last subject we need before being able to mix all concepts: Conditional execution of code. At many times you'll only want to execute code if a condition is met, and we do it like this:
@@ -417,6 +428,8 @@ let otherVar = 4 === 4
 ```
 
 Both methods to execute code and assign values conditionally will be used as you progress.
+
+* [Read More about Conditional Operations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
 # Leveling up
 
@@ -513,6 +526,8 @@ Merging is extremely useful for creating new objects that inherit all old proper
 
 Map is used to apply transformation to all data inside a list. But what if we want to filter some elements out before applying transformations? We use a method called filter for that.
 
+* [Read More about Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
 ## Filter
 
 The usage of filter is really similar to map. It's a built-in array function that you also sends a function as input just like map, but instead of returning a new value you return either true or false to determine whether an element should be kept or thrown away. Here is an example:
@@ -543,7 +558,7 @@ let moreFruits = [
 let newFruitList = moreFruits.filter(fruit => fruit.tastes === "Really Good")
 // [ { name: "Apple", tastes: "Really Good" } ]
 ```
-
+* [Read More about Filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 ## Chaining maps and filters
 
 Since both map and filter are guaranteed to always return a new array we can always chain another map or filter, this is a really sweet way to chain operations even if you are working only with 1 element inside the array. As you progress into programming you'll see how wonderfully this property really is, but for now let's just try to grasp the basic usage:
@@ -617,6 +632,8 @@ someFunctions.reduce((accumulator, func) => func(accumulator), 30)
 
 Note that because reduce is not guaranteed to return an Array (it will return whatever type you want as the accumulator) you have to be careful when chaining maps and filters after using a reduce.
 
+* [Read More about Reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+
 ## Recursion and Loops
 
 Sometimes we need to repeat actions and if either map or reduce seems to not fit we can use both methods below
@@ -640,6 +657,8 @@ aFunc(0) // Will log 0, 1, 2, 3, 4 in separate lines in your console
 ```
 
 Loops take a more "mutable" approach while "recursion" looks more like the functions we learned. The only problem with recursion in JS is that for large loops (for example more than 10 thousand elements but it depends on many things) if you don't know what you are doing you might "explode the function call stack". There are many ways to avoid this, but the most efficient one I've seen simply convert your recursions into loops, this technique is called "trampoline" (also linked on a reference in the end of this guide), we wont dig further into this but feel free to use both loops and recursion, you'll learn better about the usage of both if you try them in practice and decide for yourself the best use-case for them!
+
+* [Read More about Recursion and Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#recursion)
 
 ## Mutability
 
@@ -679,6 +698,8 @@ Note: map, filter, and reduce will always produce new values instead of mutating
 We can clearly see that in the second example we had to create more variables and invent more names, but in the long run you'll be able to grasp how this allows you to write clearer and more debugable code.
 
 One of the most common source of errors in programming happens by sharing a variable among many functions and mutating it, but this procedure is also a necessity for most of the programs. Let's learn now how to share a variable with functions to act as a storage and try to keep our mutations contained so our program's complexity doesn't outgrow us.
+
+* [Read More about Mutability and Immutability](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#recursion)
 
 ## Scopes and State Management 
 
@@ -763,6 +784,8 @@ object.display() // Value is: 6
 ```
 
 The thing to note here is that we cannot access `value` inside our object without using the functions that we returned. This is a technique that uses the parent function scope to hold a variable that can be used by all inner functions but cannot be accessed by outside. This property of sharing scopes between functions is called "Closure".
+
+* [Read More about Scopes and State Management](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
 
 ## This is the secret of functions
 
@@ -883,6 +906,8 @@ setTimeout(()) => {
 }, 1000)
 ```
 
+* [Read More about Callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+
 So lets move on to the structure that swore to destroy the callback hell but instead also brought it's own type of hell:
 
 ## Promises
@@ -968,6 +993,8 @@ Promise.resolve(5) // This is a neat way to start a promise chain!
   })
 ```
 
+* [Read More about Promise](https://developer.mozilla.org/en-US/docs/Glossary/Promise)
+
 ## Promises and Maps
 
 Before moving on to how to deal with async and solve the presented problem above I'd like to show you some cool programing moment. I'm gonna throw the code here and let you have your own thoughts:
@@ -1016,6 +1043,8 @@ let aFunction = async () => {
 
 aFunction() // This is just a Promise! "async function = Promise"
 ```
+
+* [Read More about Async Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
 ## Using foreign code
 
