@@ -116,38 +116,35 @@ false || false // false
 
 ```
 
-# Traduzido até aqui, em breve o resto será traduzido também!
-
-------------
-
 ## Valores vazios e convertendo valores para Booleans
 
-Nós podemos dizer que um valor na verdade não é nada e uma das piores partes do javascripté que temos 2 formas de dizer isso:
+Nós podemos dizer que um valor na verdade não é nada e uma das piores partes do javascript é que temos 2 formas de dizer isso:
 
 ```js
 undefined
 null
 ```
 
-Qual é a diferença? Grossamente o "undefined" aparece quando um valor nunca foi declarado pra começo de conversa. "null" é um valor que normalmente foi colocado ali por alguem que quis dizer que ali está vazio no momento (pode vir a ser preenchido no futuro ou não)
+Qual é a diferença? Grosseiramente o "undefined" aparece quando um valor nunca foi declarado pra começo de conversa. "null" é um valor que normalmente foi colocado ali por alguém que quis dizer que ali está vazio no momento (pode vir a ser preenchido no futuro ou não). Você não deve se preocupar muito com ambos agora, apenas saiba que eles existem e agem como "false" quando usados em comparações booleanas. Agora que você sabe disso, vamos encerrar esta seção com uma tabela de referência sobre quais valores são considerados "verdadeiros" ou "falsos" quando usados como booleanos:
 
-Whats the difference? Roughly "undefined" happens when a value was not ever defined to begin with. "null" is a value that normally someone purposely added there because it will be filled later on. You should bother much with both now, just know that they exist and they act as "false" when used on boolean comparisons. Now that you know that, lets end this section with a reference table on what values are considered "truthy" or "falsy" when used as booleans:
-
-The following values are always falsy, meaning that when used as booleans they are considered as false:
+Os valores a seguir são sempre falsos, o que significa que, quando usados como booleanos, são considerados falsos: 
 
 ```js
 false
 0 // (zero)
-'' // (empty string)
+'' // (string vazia)
 ""
 ``
 null
 undefined
-NaN // Not a Number, shows up when you do math with a type that is not a number
-
+NaN // Not a Number, aparece quando você faz contas com um tipo que não é um number
 ```
 
-ALL other values will always be truthy, meaning that they will be considered as true on boolean operations.
+TODOS os outros valores sempre serão verdadeiros, o que significa que serão considerados verdadeiros em operações booleanas.
+
+# Traduzido até aqui, em breve o resto será traduzido também!
+
+------------
 
 ## Variables
 
